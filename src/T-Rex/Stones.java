@@ -12,8 +12,16 @@ public class Stones extends Actor
      * Act - do whatever the Stones wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int x;
+    private int y;
     public void act() 
     {
         // Add your action code here.
+        move(-1);
+        x = getX();
+        y = getY();
+        if (x==0) {
+            setLocation(599,y);
+        }
     }    
 }
