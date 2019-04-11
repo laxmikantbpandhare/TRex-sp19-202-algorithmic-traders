@@ -88,5 +88,12 @@ public class MyWorld extends World
         cactus2.setLocation(535,295);
         cactus.setLocation(191,279);
         cactus2.setLocation(551,296);
+        Dinosaur dinosaur = new Dinosaur();
+        addObject(dinosaur,108,296);
+        dinosaur.setLocation(66,291);
+        cactus.setLocation(287,286);
+        stones.setLocation(439,287);
+        stones.setLocation(433,285);
+        stones.setLocation(433,286);
     }
 }
