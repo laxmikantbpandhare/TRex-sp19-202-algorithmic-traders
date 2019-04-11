@@ -17,6 +17,9 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        GreenfootImage bg = new GreenfootImage("background.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
         prepare();
     }
 
@@ -42,5 +45,14 @@ public class MyWorld extends World
         cactus2.setLocation(307,319);
         cactus2.setLocation(301,319);
         cactus3.setLocation(475,313);
+        Life life1 = new Life();
+        addObject(life1,335,315);
+        life1.setLocation(15,35);
+        Life life2 = new Life();
+        addObject(life2,335,315);
+        life2.setLocation(45,35);
+        Life life3 = new Life();
+        addObject(life3,335,315);
+        life3.setLocation(75,35);
     }
 }
