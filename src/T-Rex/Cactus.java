@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cactus extends Actor
+public class Cactus extends Actor implements Cloneable
 {
     /**
      * Act - do whatever the Cactus wants to do. This method is called whenever
@@ -24,4 +24,9 @@ public class Cactus extends Actor
             setLocation(599,y);
         }
     }    
+    
+    @Override 
+    public Cactus clone() throws CloneNotSupportedException {
+          return (Cactus) super.clone();
+    }
 }
