@@ -37,6 +37,8 @@ public class MyWorld extends World
         Stones stones2 = new Stones();
         addObject(stones2,164,276);
         stones.setLocation(367,257);
+        CurrentScore currentScore = new CurrentScore(120,120);
+        addObject(currentScore,500,100);
         cactus2.setLocation(307,319);
         cactus2.setLocation(301,319);
         cactus3.setLocation(475,313);
