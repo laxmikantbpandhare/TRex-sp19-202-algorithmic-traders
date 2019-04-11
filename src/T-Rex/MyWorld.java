@@ -36,6 +36,12 @@ public class MyWorld extends World
             addObject(cactus,75,315);
             addObject(cactus2,247,312);
             addObject(cactus3,444,311);
+            Bird bird = new Bird();
+            Bird bird2 = bird.clone();
+            Bird bird3 = bird.clone();
+            addObject(bird,100,231);
+            addObject(bird2,234,231);
+            addObject(bird3,500,231);
             Stones stones = new Stones();
             Stones stones2 = stones.clone();
             addObject(stones,343,348);
