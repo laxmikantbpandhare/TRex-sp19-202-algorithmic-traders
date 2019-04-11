@@ -9,10 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dinosaur extends Actor
 {
     //GifImage dino = new GifImage("dinosaur.gif");
+    private final int GRAVITY = 1;
+    private int velocity;
     private int delayTimer;
     private int page;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
+        velocity=0;
     }
     
     /**
@@ -28,5 +31,27 @@ public class Dinosaur extends Actor
             setImage("dinosaur"+(page+1)+".gif");
             getImage(). scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         }
-    }    
+        fall();
+        if (Greenfoot.isKeyDown("space") && getY() > 296) jump();
+    }
+    
+    public void fall()
+    {
+        setLocation(getX(), getY() + velocity);
+        if(getY() > 296)
+            velocity = 0;
+        else
+            velocity = velocity + GRAVITY;
+    }
+    
+    public void jump()
+    {
+        velocity = velocity - 20;
+    }
+    
+    public void checkKeys()
+    {
+        if(Greenfoot.isKeyDown("space") && getY() > 296)
+            jump();
+    }
 }
