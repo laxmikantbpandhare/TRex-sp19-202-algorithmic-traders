@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dinosaur extends Actor
+public class Dinosaur extends Leaf
 {
     //GifImage dino = new GifImage("dinosaur.gif");
     private final int GRAVITY = 1;

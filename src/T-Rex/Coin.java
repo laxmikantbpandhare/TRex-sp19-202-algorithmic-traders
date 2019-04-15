@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cactus extends Leaf implements Cloneable
+public class Coin extends Leaf implements Cloneable
 {
     /**
      * Act - do whatever the Cactus wants to do. This method is called whenever
@@ -14,6 +14,9 @@ public class Cactus extends Leaf implements Cloneable
      */
     private int x;
     private int y;
+    public Coin() {
+        getImage().scale(getImage().getWidth()*5/100, getImage().getHeight()*5/100);   
+    }
     public void act() 
     {
         // Add your action code here.
@@ -26,7 +29,9 @@ public class Cactus extends Leaf implements Cloneable
     }    
     
     @Override 
-    public Cactus clone() throws CloneNotSupportedException {
-          return (Cactus) super.clone();
+    public Coin clone() throws CloneNotSupportedException {
+          getImage().scale(getImage().getWidth()*5/100, getImage().getHeight()*5/100);
+          return (Coin) super.clone();
     }
 }
+
