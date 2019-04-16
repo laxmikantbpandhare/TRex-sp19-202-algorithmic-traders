@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1000, 600, 1); 
         GreenfootImage bg = new GreenfootImage("background.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
@@ -96,8 +96,7 @@ public class MyWorld extends World
             cactus.setLocation(191,279);
             cactus2.setLocation(551,296);
             Dinosaur dinosaur = new Dinosaur();
-            addObject(dinosaur,108,296);
-            dinosaur.setLocation(66,291);
+            addObject(dinosaur,74,442);
             cactus.setLocation(287,286);
             stones.setLocation(439,287);
             stones.setLocation(433,285);
@@ -106,5 +105,35 @@ public class MyWorld extends World
         catch(CloneNotSupportedException e){
             e.printStackTrace();
         }
+        Clouds clouds = new Clouds();
+        addObject(clouds,156,82);
+        clouds.act();
+        Clouds clouds2 = new Clouds();
+        addObject(clouds2,315,89);
+        clouds2.setLocation(351,80);
+        Food food = new Food();
+        addObject(food,173,206);
+        Food food2 = new Food();
+        addObject(food2,530,206);
+        Coin coin = new Coin();
+        addObject(coin,273,205);
+        coin.setLocation(272,186);
+        Coin coin2 = new Coin();
+        addObject(coin2,491,172);
+        coin2.setLocation(577,189);
+        food.setLocation(257,338);
+        coin.setLocation(436,308);
+        food2.setLocation(620,322);
+        coin2.setLocation(804,321);
+        coin2.setLocation(847,328);
+        Clouds clouds3 = new Clouds();
+        addObject(clouds3,884,172);
+        clouds3.setLocation(729,76);
+        Clouds clouds4 = new Clouds();
+        addObject(clouds4,740,106);
+        clouds3.setLocation(688,75);
+        clouds2.setLocation(465,82);
+        clouds4.setLocation(394,63);
+        
     }
 }
