@@ -34,12 +34,19 @@ public class Dinosaur extends Leaf
         }
         fall();
         if (Greenfoot.isKeyDown("space") && getY() > 296) jump();
-
-        if(touch(Coin.class) || touch(Food.class)) {
+        
+        checkCollision();
+    }
+    
+    public void checkCollision() {
+        if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
+            String touchedClassName = touched.getClass().getName();
             System.out.println(touched.getClass().getName());
-            getWorld().removeObject(touched);
-            //Greenfoot.stop();
+            if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
+                getWorld().removeObject(touched);
+            else
+                Greenfoot.stop();
         }
     }
 

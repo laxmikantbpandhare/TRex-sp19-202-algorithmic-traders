@@ -29,4 +29,9 @@ public class Cactus extends Leaf implements Cloneable
     public Cactus clone() throws CloneNotSupportedException {
           return (Cactus) super.clone();
     }
+    
+    public Cactus() {
+        GreenfootImage image = getImage();
+        image.scale(50,50);
+    }
 }

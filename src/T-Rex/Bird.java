@@ -24,11 +24,14 @@ public class Bird extends Leaf implements Cloneable
             setLocation(999,y);
         }
     }  
-    
+
     @Override 
     public Bird clone() throws CloneNotSupportedException {
-          GreenfootImage image = getImage();
-          image.scale(50,50);
-          return (Bird) super.clone();
+        return (Bird) super.clone();
+    }
+
+    public Bird() {
+        GreenfootImage image = getImage();
+        image.scale(50,50);
     }
 }

@@ -17,6 +17,7 @@ public class Coin extends Leaf implements Cloneable
     public Coin() {
         getImage().scale(getImage().getWidth()*5/100, getImage().getHeight()*5/100);   
     }
+
     public void act() 
     {
         // Add your action code here.
@@ -27,11 +28,10 @@ public class Coin extends Leaf implements Cloneable
             setLocation(999,y);
         }
     }    
-    
+
     @Override 
     public Coin clone() throws CloneNotSupportedException {
-          getImage().scale(getImage().getWidth()*5/100, getImage().getHeight()*5/100);
-          return (Coin) super.clone();
+      return (Coin) super.clone();
     }
 }
 

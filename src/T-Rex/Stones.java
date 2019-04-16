@@ -29,4 +29,9 @@ public class Stones extends Leaf implements Cloneable
     public Stones clone() throws CloneNotSupportedException {
           return (Stones) super.clone();
     }
+    
+    public Stones() {
+        GreenfootImage image = getImage();
+        image.scale(40,40);
+    }
 }
