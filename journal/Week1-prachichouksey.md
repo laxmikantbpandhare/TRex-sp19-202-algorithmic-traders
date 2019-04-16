@@ -9,5 +9,6 @@
 
 What am I planning to work on next?
 * Understanding Greenfoot tool better and documenting use cases.
+* Implementing features finalised during the planning meeting.
 
 What tasks are blocked waiting on another team member?

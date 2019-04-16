@@ -10,5 +10,7 @@ Moreover, every team member picked a XP value and I picked Simplicity. I would e
 
 ### What am I planning to work on next?
 
-### What tasks are blocked waiting on another team member?
+1. To learn more about greenfoot to implement our solution.
+2. To learn about prototype design pattern. In our solution, some actors objects are supposed to be created multiple times. In such a case, we can use prototype pattern to create clone from the existing object instead of creating the object from scratch everytime using factory method pattern
 
+### What tasks are blocked waiting on another team member?
