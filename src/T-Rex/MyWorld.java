@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private Obstacles obstacles;
+    private LandObstacles landObstacles;
+    private SkyObstacles skyObstacles;
     private Rewards rewards;
     /**
      * Constructor for objects of class MyWorld.
@@ -21,7 +22,8 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("background.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        obstacles = new Obstacles();
+        landObstacles = new LandObstacles();
+        skyObstacles = new SkyObstacles();
         rewards = new Rewards();
         prepare();
     }

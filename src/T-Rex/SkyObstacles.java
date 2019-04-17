@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Obstacles extends Composite
+public class SkyObstacles extends Composite
 {
     /**
      * Act - do whatever the Obstacles wants to do. This method is called whenever
