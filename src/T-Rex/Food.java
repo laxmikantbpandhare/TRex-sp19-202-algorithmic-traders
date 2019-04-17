@@ -1,19 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Stones here.
+ * Write a description of class Cactus here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Stones extends Leaf implements Cloneable
+public class Food extends Leaf implements Cloneable
 {
     /**
-     * Act - do whatever the Stones wants to do. This method is called whenever
+     * Act - do whatever the Cactus wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int x;
     private int y;
+    public Food() {
+        getImage().scale(getImage().getWidth()*70/100, getImage().getHeight()*70/100);
+    }
     public void act() 
     {
         // Add your action code here.
@@ -23,15 +26,11 @@ public class Stones extends Leaf implements Cloneable
         if (x==0) {
             setLocation(999,y);
         }
-    }  
+    }    
     
     @Override 
-    public Stones clone() throws CloneNotSupportedException {
-          return (Stones) super.clone();
-    }
-    
-    public Stones() {
-        GreenfootImage image = getImage();
-        image.scale(40,40);
+    public Food clone() throws CloneNotSupportedException {
+          getImage().scale(getImage().getWidth()*70/100, getImage().getHeight()*70/100);
+          return (Food) super.clone();
     }
 }
