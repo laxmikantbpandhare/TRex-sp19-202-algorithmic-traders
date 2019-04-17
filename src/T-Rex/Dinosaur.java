@@ -33,7 +33,7 @@ public class Dinosaur extends Leaf
             getImage(). scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         }
         fall();
-        if (Greenfoot.isKeyDown("space") && getY() > 296) jump();
+        if (Greenfoot.isKeyDown("space") && getY() > 442) jump();
         
         checkCollision();
     }
@@ -53,20 +53,22 @@ public class Dinosaur extends Leaf
     public void fall()
     {
         setLocation(getX(), getY() + velocity);
-        if(getY() > 296)
+        if(getY() > 442){
             velocity = 0;
-        else
+        }
+        else{
             velocity = velocity + GRAVITY;
+        }
     }
 
     public void jump()
     {
-        velocity = velocity - 20;
+        velocity = velocity - 18;
     }
 
     public void checkKeys()
     {
-        if(Greenfoot.isKeyDown("space") && getY() > 296)
+        if(Greenfoot.isKeyDown("space") && getY() > 442)
             jump();
     }  
 
