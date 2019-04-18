@@ -11,6 +11,7 @@ public class MyWorld extends World
     private LandObstacles landObstacles;
     private SkyObstacles skyObstacles;
     private Rewards rewards;
+    private CurrentScore scoreBoard;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,6 +26,7 @@ public class MyWorld extends World
         landObstacles = new LandObstacles();
         skyObstacles = new SkyObstacles();
         rewards = new Rewards();
+        scoreBoard = new CurrentScore(120,120);
         prepare();
     }
 
@@ -41,12 +43,12 @@ public class MyWorld extends World
             addObject(cactus1,300,432);
             addObject(cactus2,662,432);
             addObject(cactus3,705,432);
-            Bird bird1 = new Bird();
-            Bird bird2 = bird1.clone();
-            Bird bird3 = bird1.clone();
-            addObject(bird1,100,231);
-            addObject(bird2,234,231);
-            addObject(bird3,500,231);
+            //Bird bird1 = new Bird();
+            //Bird bird2 = bird1.clone();
+            //Bird bird3 = bird1.clone();
+            //addObject(bird1,100,231);
+            //addObject(bird2,234,231);
+            //addObject(bird3,500,231);
             Stones stones1 = new Stones();
             Stones stones2 = stones1.clone();
             addObject(stones1,499,443);
@@ -79,8 +81,8 @@ public class MyWorld extends World
             e.printStackTrace();
         }
 
-        CurrentScore currentScore = new CurrentScore(120,120);
-        addObject(currentScore,898,73);
+        
+        addObject(scoreBoard,898,73);
         Life life1 = new Life();
         addObject(life1,15,35);
         Life life2 = new Life();
@@ -89,5 +91,9 @@ public class MyWorld extends World
         addObject(life3,75,35);
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
+    }
+    public CurrentScore getScoreBoard()
+    {
+        return scoreBoard;
     }
 }
