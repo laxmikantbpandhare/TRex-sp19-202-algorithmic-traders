@@ -7,16 +7,19 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dinosaur extends Leaf
+public class Dinosaur extends Leaf implements ITRexSubject
 {
     //GifImage dino = new GifImage("dinosaur.gif");
     private final int GRAVITY = 1;
     private int velocity;
     private int delayTimer;
     private int page;
+    private ITRexObserver trexObserver;
+    private String touchedClassName;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         velocity=0;
+        
     }
 
     /**
@@ -41,9 +44,12 @@ public class Dinosaur extends Leaf
     public void checkCollision() {
         if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
-            String touchedClassName = touched.getClass().getName();
-            System.out.println(touched.getClass().getName());
+            
+            this.touchedClassName = touched.getClass().getName();
+            notifyObservers();
+            //System.out.println(touched.getClass().getName());
             if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
+                
                 getWorld().removeObject(touched);
             else
                 Greenfoot.stop();
@@ -121,5 +127,12 @@ public class Dinosaur extends Leaf
                 if(Ai.getColorAt(xi-x_Offset,yi-y_Offset).getAlpha()>0 && i.getColorAt(xi,yi).getAlpha()>0)
                     b=false;
         return !b;
+    }
+    public void notifyObservers()
+    {
+        MyWorld world=(MyWorld)getWorld();
+        trexObserver=(ITRexObserver)world.getScoreBoard();
+        this.trexObserver.updateScore(this.touchedClassName);
+        
     }
 }

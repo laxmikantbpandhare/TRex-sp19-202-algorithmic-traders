@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CurrentScore extends Actor
+public class CurrentScore extends Actor implements ITRexObserver
 {
     private static final Color MAIN_COLOR = new Color(0x60, 0x60, 0x60); // dark grey
     
@@ -15,6 +15,8 @@ public class CurrentScore extends Actor
     private static final int RECORD_TEXT_HEIGHT = 25;
     
     private static final int RECORD_SCORE_TEXT_HEIGHT = 25;
+    
+    private int score;
     
     /**
      * Constructor for objects of class ScoreBoard.
@@ -25,7 +27,7 @@ public class CurrentScore extends Actor
     public CurrentScore(int width, int height)
     {    
         setImage(new GreenfootImage(width, height)); 
-        
+        score=0;
         drawScores();
     }
     /**
@@ -35,19 +37,36 @@ public class CurrentScore extends Actor
     public void act() 
     {
         // Add your action code here.
+        
     }
     
     
     private void drawString(String text, int x, int y, Color color, int height)
     {
-        getImage().drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+        GreenfootImage scoreImage=getImage();
+        if(this.score==0){
+        scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+    }
+    else
+    {
+        scoreImage.clear();
+        scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+    }
+    
     }
     
     private void drawScores()
     {
-        drawString("0029", 0, 0, MAIN_COLOR, CURRENT_SCORE_TEXT_HEIGHT);
-        drawString("Record", 16, CURRENT_SCORE_TEXT_HEIGHT+2, MAIN_COLOR, RECORD_TEXT_HEIGHT);
-        drawString("--------------", 6, CURRENT_SCORE_TEXT_HEIGHT+10, MAIN_COLOR, RECORD_TEXT_HEIGHT);
-        drawString("0512",25, CURRENT_SCORE_TEXT_HEIGHT+22, MAIN_COLOR ,RECORD_SCORE_TEXT_HEIGHT);
+        String currentScore=Integer.toString(this.score);
+        drawString(currentScore, 0, 0, MAIN_COLOR, CURRENT_SCORE_TEXT_HEIGHT);
+        
+    }
+    public void updateScore(String type)
+    {
+       if(type.equals("Coin"))
+       {
+           this.score=this.score+5;
+           drawScores();
+        }
     }
 }
