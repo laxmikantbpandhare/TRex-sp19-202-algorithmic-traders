@@ -39,14 +39,17 @@ public class Dinosaur extends Leaf
     }
     
     public void checkCollision() {
-        if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)) {
+        if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
+        || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
             String touchedClassName = touched.getClass().getName();
             System.out.println(touched.getClass().getName());
             if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
                 getWorld().removeObject(touched);
-            else
+            else{
                 Greenfoot.stop();
+            }
+                
         }
     }
 

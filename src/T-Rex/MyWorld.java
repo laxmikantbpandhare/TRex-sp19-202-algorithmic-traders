@@ -38,9 +38,9 @@ public class MyWorld extends World
             Cactus cactus1 = new Cactus();
             Cactus cactus2 = cactus1.clone();
             Cactus cactus3 = cactus1.clone();
-            addObject(cactus1,300,432);
-            addObject(cactus2,662,432);
-            addObject(cactus3,705,432);
+            //addObject(cactus1,300,432);
+            //addObject(cactus2,662,432);
+            //addObject(cactus3,705,432);
             Bird bird1 = new Bird();
             Bird bird2 = bird1.clone();
             Bird bird3 = bird1.clone();
@@ -49,8 +49,8 @@ public class MyWorld extends World
             addObject(bird3,500,231);
             Stones stones1 = new Stones();
             Stones stones2 = stones1.clone();
-            addObject(stones1,499,443);
-            addObject(stones2,930,443);
+            //addObject(stones1,499,443);
+            //addObject(stones2,930,443);
             Clouds clouds1 = new Clouds();
             Clouds clouds2 = clouds1.clone();
             Clouds clouds3 = clouds1.clone();
@@ -72,8 +72,14 @@ public class MyWorld extends World
             rewards.addChild(coin1);
             rewards.addChild(food2);
             rewards.addChild(coin2);
+            landObstacles.addChild(cactus1);
+            landObstacles.addChild(stones1);
+            landObstacles.addChild(cactus2);
+            landObstacles.addChild(cactus3);
+            landObstacles.addChild(stones2);
             
             addObject(rewards,1100,0);
+            addObject(landObstacles,1100,0);
         }
         catch(CloneNotSupportedException e){
             e.printStackTrace();
