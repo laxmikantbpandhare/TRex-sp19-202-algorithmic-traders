@@ -16,6 +16,8 @@ public class Dinosaur extends Leaf implements ITRexSubject
     private int page;
     private ITRexObserver trexObserver;
     private String touchedClassName;
+    int x = 40;
+    int y = 40;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         velocity=0;
@@ -33,7 +35,7 @@ public class Dinosaur extends Leaf implements ITRexSubject
         {
             page = (page+1)%16; // the last number is total images in animation
             setImage("dinosaur"+(page+1)+".gif");
-            getImage(). scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
+            getImage(). scale(getImage().getWidth()*x/100, getImage().getHeight()*y/100);
         }
         fall();
         if (Greenfoot.isKeyDown("space") && getY() > 442) jump();
@@ -47,10 +49,17 @@ public class Dinosaur extends Leaf implements ITRexSubject
             
             this.touchedClassName = touched.getClass().getName();
             notifyObservers();
+            if(touchedClassName.equals("Coin"))
+            {
+                MyWorld myworld = (MyWorld) getWorld();
+                LifeBar lifebar = myworld.getLifeBar();
+                lifebar.looseLife();
+            }
             //System.out.println(touched.getClass().getName());
             if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
-                
+            {
                 getWorld().removeObject(touched);
+            }
             else
                 Greenfoot.stop();
         }
@@ -133,6 +142,5 @@ public class Dinosaur extends Leaf implements ITRexSubject
         MyWorld world=(MyWorld)getWorld();
         trexObserver=(ITRexObserver)world.getScoreBoard();
         this.trexObserver.updateScore(this.touchedClassName);
-        
     }
 }

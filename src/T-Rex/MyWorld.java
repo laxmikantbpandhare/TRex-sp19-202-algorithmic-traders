@@ -12,6 +12,9 @@ public class MyWorld extends World
     private SkyObstacles skyObstacles;
     private Rewards rewards;
     private CurrentScore scoreBoard;
+    private LifeBar lifebar = new LifeBar();
+    private int life = 5;
+    private Actor lifeBarDecorator;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -28,6 +31,8 @@ public class MyWorld extends World
         rewards = new Rewards();
         scoreBoard = new CurrentScore(120,120);
         prepare();
+        life = 4;
+        lifeBarDecorator = new LifeBarDecorator((ILifeBar) lifebar);
     }
 
     /**
@@ -69,31 +74,37 @@ public class MyWorld extends World
             Coin coin2 = coin1.clone();
             //addObject(coin1,400,290);
             //addObject(coin2,807,290);
-            
+
             rewards.addChild(food1);
             rewards.addChild(coin1);
             rewards.addChild(food2);
             rewards.addChild(coin2);
-            
+
             addObject(rewards,1100,0);
         }
         catch(CloneNotSupportedException e){
             e.printStackTrace();
         }
 
-        
         addObject(scoreBoard,898,73);
-        Life life1 = new Life();
-        addObject(life1,15,35);
-        Life life2 = new Life();
-        addObject(life2,45,35);
-        Life life3 = new Life();
-        addObject(life3,75,35);
+        
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
     }
+
+    public void act ()
+    {
+        addObject((Actor)lifeBarDecorator,75,20);
+        ((LifeBarDecorator)lifeBarDecorator).display();
+    }
+
     public CurrentScore getScoreBoard()
     {
         return scoreBoard;
+    }
+
+    public LifeBar getLifeBar()
+    {
+        return lifebar;
     }
 }
