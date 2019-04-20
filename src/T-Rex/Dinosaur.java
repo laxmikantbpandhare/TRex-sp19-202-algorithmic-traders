@@ -14,7 +14,8 @@ public class Dinosaur extends Leaf implements ITRexSubject
     private int velocity;
     private int delayTimer;
     private int page;
-    private ITRexObserver trexObserver;
+    private ITRexObserver trexObserverReward;
+    private ITRexObserver trexObserverObstacle;
     private String touchedClassName;
     int x = 40;
     int y = 40;
@@ -49,12 +50,7 @@ public class Dinosaur extends Leaf implements ITRexSubject
             
             this.touchedClassName = touched.getClass().getName();
             notifyObservers();
-            if(touchedClassName.equals("Coin"))
-            {
-                MyWorld myworld = (MyWorld) getWorld();
-                LifeBar lifebar = myworld.getLifeBar();
-                lifebar.looseLife();
-            }
+            
             //System.out.println(touched.getClass().getName());
             if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
             {
@@ -140,7 +136,9 @@ public class Dinosaur extends Leaf implements ITRexSubject
     public void notifyObservers()
     {
         MyWorld world=(MyWorld)getWorld();
-        trexObserver=(ITRexObserver)world.getScoreBoard();
-        this.trexObserver.updateScore(this.touchedClassName);
+        trexObserverReward=(ITRexObserver)world.getScoreBoard();
+        trexObserverObstacle=(ITRexObserver)world.getLifeBar();
+        this.trexObserverReward.update(this.touchedClassName);
+        this.trexObserverObstacle.update(this.touchedClassName);
     }
 }

@@ -61,7 +61,7 @@ public class CurrentScore extends Actor implements ITRexObserver
         drawString(currentScore, 0, 0, MAIN_COLOR, CURRENT_SCORE_TEXT_HEIGHT);
         
     }
-    public void updateScore(String type)
+    public void update(String type)
     {
        if(type.equals("Coin"))
        {

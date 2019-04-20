@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeBar extends Actor implements ILifeBar
+public class LifeBar extends Actor implements ILifeBar,ITRexObserver
 {
     int life = 6;
     int lifeBarWidth = 120; 
@@ -43,5 +43,11 @@ public class LifeBar extends Actor implements ILifeBar
     public int getLife()
     {
         return life;
+    }
+    public void update(String type)
+    {
+        if(type.equals("Bird") ||type.equals("Cactus")||type.equals("Stones"))
+        looseLife();
+        
     }
 }

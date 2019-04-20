@@ -6,5 +6,5 @@
  */
 public interface ITRexObserver  
 {
-    public void updateScore(String type);
+    public void update(String type);
 }
