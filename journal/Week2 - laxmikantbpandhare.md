@@ -17,4 +17,4 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 
     Waiting for Observer pattern to implement by team member. Once collision happends with dinosaur or bird, the observer will
- notify and decorator reduce th life accordingly.
+    notify and decorator reduce th life accordingly.
