@@ -21,7 +21,7 @@ public class Coin extends Leaf implements Cloneable
     public void act() 
     {
         // Add your action code here.
-        move(-2);
+        move(-6);
         x = getX();
         y = getY();
         if (x==0) {

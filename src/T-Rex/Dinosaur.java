@@ -7,16 +7,22 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dinosaur extends Leaf
+public class Dinosaur extends Leaf implements ITRexSubject
 {
     //GifImage dino = new GifImage("dinosaur.gif");
     private final int GRAVITY = 1;
     private int velocity;
     private int delayTimer;
     private int page;
+    private ITRexObserver trexObserverReward;
+    private ITRexObserver trexObserverObstacle;
+    private String touchedClassName;
+    int x = 40;
+    int y = 40;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         velocity=0;
+        
     }
 
     /**
@@ -30,10 +36,10 @@ public class Dinosaur extends Leaf
         {
             page = (page+1)%16; // the last number is total images in animation
             setImage("dinosaur"+(page+1)+".gif");
-            getImage(). scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
+            getImage(). scale(getImage().getWidth()*x/100, getImage().getHeight()*y/100);
         }
         fall();
-        if (Greenfoot.isKeyDown("space") && getY() > 296) jump();
+        if (Greenfoot.isKeyDown("space") && getY() > 442) jump();
         
         checkCollision();
     }
@@ -42,10 +48,15 @@ public class Dinosaur extends Leaf
         if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
         || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
-            String touchedClassName = touched.getClass().getName();
-            System.out.println(touched.getClass().getName());
+            
+            this.touchedClassName = touched.getClass().getName();
+            notifyObservers();
+            
+            //System.out.println(touched.getClass().getName());
             if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
+            {
                 getWorld().removeObject(touched);
+            }
             else{
                 Greenfoot.stop();
             }
@@ -56,20 +67,22 @@ public class Dinosaur extends Leaf
     public void fall()
     {
         setLocation(getX(), getY() + velocity);
-        if(getY() > 296)
+        if(getY() > 442){
             velocity = 0;
-        else
+        }
+        else{
             velocity = velocity + GRAVITY;
+        }
     }
 
     public void jump()
     {
-        velocity = velocity - 20;
+        velocity = velocity - 18;
     }
 
     public void checkKeys()
     {
-        if(Greenfoot.isKeyDown("space") && getY() > 296)
+        if(Greenfoot.isKeyDown("space") && getY() > 442)
             jump();
     }  
 
@@ -122,5 +135,13 @@ public class Dinosaur extends Leaf
                 if(Ai.getColorAt(xi-x_Offset,yi-y_Offset).getAlpha()>0 && i.getColorAt(xi,yi).getAlpha()>0)
                     b=false;
         return !b;
+    }
+    public void notifyObservers()
+    {
+        MyWorld world=(MyWorld)getWorld();
+        trexObserverReward=(ITRexObserver)world.getScoreBoard();
+        trexObserverObstacle=(ITRexObserver)world.getLifeBar();
+        this.trexObserverReward.update(this.touchedClassName);
+        this.trexObserverObstacle.update(this.touchedClassName);
     }
 }

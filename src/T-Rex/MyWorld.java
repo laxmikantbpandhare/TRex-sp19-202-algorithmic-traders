@@ -11,6 +11,11 @@ public class MyWorld extends World
     private LandObstacles landObstacles;
     private SkyObstacles skyObstacles;
     private Rewards rewards;
+    private CurrentScore scoreBoard;
+    private ILevelStrategy currentStrategy;
+    private LifeBar lifebar = new LifeBar();
+    private int life = 5;
+    private Actor lifeBarDecorator;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,7 +30,13 @@ public class MyWorld extends World
         landObstacles = new LandObstacles();
         skyObstacles = new SkyObstacles();
         rewards = new Rewards();
+        scoreBoard = new CurrentScore(120,120);
+        currentStrategy = new FirstLevelStratergy();
+        addObject((Actor) currentStrategy, 67,25);
+        currentStrategy.gameDisplay();
         prepare();
+        life = 4;
+        lifeBarDecorator = new LifeBarDecorator((ILifeBar) lifebar);
     }
 
     /**
@@ -35,9 +46,10 @@ public class MyWorld extends World
     private void prepare()
     {
         try{
-            Cactus cactus1 = new Cactus();
-            Cactus cactus2 = cactus1.clone();
-            Cactus cactus3 = cactus1.clone();
+
+            //Cactus cactus1 = new Cactus();
+            //Cactus cactus2 = cactus1.clone();
+            //Cactus cactus3 = cactus1.clone();
             //addObject(cactus1,300,432);
             //addObject(cactus2,662,432);
             //addObject(cactus3,705,432);
@@ -59,41 +71,46 @@ public class MyWorld extends World
             addObject(clouds2,315,89);
             addObject(clouds3,884,172);
             addObject(clouds4,740,106);
-            Food food1 = new Food();
-            Food food2 = food1.clone();
+            //Food food1 = new Food();
+            //Food food2 = food1.clone();
             //addObject(food1,195,290);
             //addObject(food2,557,290);
-            Coin coin1 = new Coin();
-            Coin coin2 = coin1.clone();
+            //Coin coin1 = new Coin();
+            //Coin coin2 = coin1.clone();
             //addObject(coin1,400,290);
             //addObject(coin2,807,290);
             
-            rewards.addChild(food1);
-            rewards.addChild(coin1);
-            rewards.addChild(food2);
-            rewards.addChild(coin2);
-            landObstacles.addChild(cactus1);
-            landObstacles.addChild(stones1);
-            landObstacles.addChild(cactus2);
-            landObstacles.addChild(cactus3);
-            landObstacles.addChild(stones2);
+
+            //rewards.addChild(food1);
+            //rewards.addChild(coin1);
+            //rewards.addChild(food2);
+            //rewards.addChild(coin2);
             
-            addObject(rewards,1100,0);
-            addObject(landObstacles,1100,0);
+            //addObject(rewards,1100,0);
         }
         catch(CloneNotSupportedException e){
             e.printStackTrace();
         }
 
-        CurrentScore currentScore = new CurrentScore(120,120);
-        addObject(currentScore,898,73);
-        Life life1 = new Life();
-        addObject(life1,15,35);
-        Life life2 = new Life();
-        addObject(life2,45,35);
-        Life life3 = new Life();
-        addObject(life3,75,35);
+        addObject(scoreBoard,898,73);
+        
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
+    }
+
+    public void act ()
+    {
+        addObject((Actor)lifeBarDecorator,75,20);
+        ((LifeBarDecorator)lifeBarDecorator).display();
+    }
+
+    public CurrentScore getScoreBoard()
+    {
+        return scoreBoard;
+    }
+
+    public LifeBar getLifeBar()
+    {
+        return lifebar;
     }
 }
