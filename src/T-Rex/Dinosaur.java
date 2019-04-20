@@ -45,7 +45,8 @@ public class Dinosaur extends Leaf implements ITRexSubject
     }
     
     public void checkCollision() {
-        if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)) {
+        if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
+        || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
             
             this.touchedClassName = touched.getClass().getName();
@@ -56,8 +57,10 @@ public class Dinosaur extends Leaf implements ITRexSubject
             {
                 getWorld().removeObject(touched);
             }
-            else
+            else{
                 Greenfoot.stop();
+            }
+                
         }
     }
 

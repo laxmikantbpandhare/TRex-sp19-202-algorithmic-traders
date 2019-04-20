@@ -20,6 +20,7 @@ public class Cactus extends Leaf implements Cloneable
         move(-8);
         x = getX();
         y = getY();
+        System.out.println("Cactus x= "+x+",y= "+y);
         if (x==0) {
             setLocation(999,y);
         }

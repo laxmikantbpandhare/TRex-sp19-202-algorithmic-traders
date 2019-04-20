@@ -20,7 +20,7 @@ public class FirstLevelStratergy extends LevelStrategy
     }
     
     public void gameDisplay(){
-        //addLandObstacles();
+        addLandObstacles();
         addRewards();
     };
     

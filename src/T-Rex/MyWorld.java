@@ -46,6 +46,7 @@ public class MyWorld extends World
     private void prepare()
     {
         try{
+
             //Cactus cactus1 = new Cactus();
             //Cactus cactus2 = cactus1.clone();
             //Cactus cactus3 = cactus1.clone();
@@ -60,8 +61,8 @@ public class MyWorld extends World
             addObject(bird3,500,231);
             Stones stones1 = new Stones();
             Stones stones2 = stones1.clone();
-            addObject(stones1,499,443);
-            addObject(stones2,930,443);
+            //addObject(stones1,499,443);
+            //addObject(stones2,930,443);
             Clouds clouds1 = new Clouds();
             Clouds clouds2 = clouds1.clone();
             Clouds clouds3 = clouds1.clone();
@@ -79,6 +80,7 @@ public class MyWorld extends World
             //addObject(coin1,400,290);
             //addObject(coin2,807,290);
             
+
             //rewards.addChild(food1);
             //rewards.addChild(coin1);
             //rewards.addChild(food2);
