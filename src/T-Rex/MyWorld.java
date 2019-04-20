@@ -13,6 +13,9 @@ public class MyWorld extends World
     private Rewards rewards;
     private CurrentScore scoreBoard;
     private ILevelStrategy currentStrategy;
+    private LifeBar lifebar = new LifeBar();
+    private int life = 5;
+    private Actor lifeBarDecorator;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -32,6 +35,8 @@ public class MyWorld extends World
         addObject((Actor) currentStrategy, 67,25);
         currentStrategy.gameDisplay();
         prepare();
+        life = 4;
+        lifeBarDecorator = new LifeBarDecorator((ILifeBar) lifebar);
     }
 
     /**
@@ -85,19 +90,25 @@ public class MyWorld extends World
             e.printStackTrace();
         }
 
-        
         addObject(scoreBoard,898,73);
-        Life life1 = new Life();
-        addObject(life1,15,35);
-        Life life2 = new Life();
-        addObject(life2,45,35);
-        Life life3 = new Life();
-        addObject(life3,75,35);
+        
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
     }
+
+    public void act ()
+    {
+        addObject((Actor)lifeBarDecorator,75,20);
+        ((LifeBarDecorator)lifeBarDecorator).display();
+    }
+
     public CurrentScore getScoreBoard()
     {
         return scoreBoard;
+    }
+
+    public LifeBar getLifeBar()
+    {
+        return lifebar;
     }
 }
