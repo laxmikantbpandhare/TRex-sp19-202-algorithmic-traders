@@ -12,6 +12,7 @@ public class MyWorld extends World
     private SkyObstacles skyObstacles;
     private Rewards rewards;
     private CurrentScore scoreBoard;
+    private ILevelStrategy currentStrategy;
     private LifeBar lifebar = new LifeBar();
     private int life = 5;
     private Actor lifeBarDecorator;
@@ -30,6 +31,9 @@ public class MyWorld extends World
         skyObstacles = new SkyObstacles();
         rewards = new Rewards();
         scoreBoard = new CurrentScore(120,120);
+        currentStrategy = new FirstLevelStratergy();
+        addObject((Actor) currentStrategy, 67,25);
+        currentStrategy.gameDisplay();
         prepare();
         life = 4;
         lifeBarDecorator = new LifeBarDecorator((ILifeBar) lifebar);
@@ -42,12 +46,12 @@ public class MyWorld extends World
     private void prepare()
     {
         try{
-            Cactus cactus1 = new Cactus();
-            Cactus cactus2 = cactus1.clone();
-            Cactus cactus3 = cactus1.clone();
-            addObject(cactus1,300,432);
-            addObject(cactus2,662,432);
-            addObject(cactus3,705,432);
+            //Cactus cactus1 = new Cactus();
+            //Cactus cactus2 = cactus1.clone();
+            //Cactus cactus3 = cactus1.clone();
+            //addObject(cactus1,300,432);
+            //addObject(cactus2,662,432);
+            //addObject(cactus3,705,432);
             Bird bird1 = new Bird();
             Bird bird2 = bird1.clone();
             Bird bird3 = bird1.clone();
@@ -66,21 +70,21 @@ public class MyWorld extends World
             addObject(clouds2,315,89);
             addObject(clouds3,884,172);
             addObject(clouds4,740,106);
-            Food food1 = new Food();
-            Food food2 = food1.clone();
+            //Food food1 = new Food();
+            //Food food2 = food1.clone();
             //addObject(food1,195,290);
             //addObject(food2,557,290);
-            Coin coin1 = new Coin();
-            Coin coin2 = coin1.clone();
+            //Coin coin1 = new Coin();
+            //Coin coin2 = coin1.clone();
             //addObject(coin1,400,290);
             //addObject(coin2,807,290);
-
-            rewards.addChild(food1);
-            rewards.addChild(coin1);
-            rewards.addChild(food2);
-            rewards.addChild(coin2);
-
-            addObject(rewards,1100,0);
+            
+            //rewards.addChild(food1);
+            //rewards.addChild(coin1);
+            //rewards.addChild(food2);
+            //rewards.addChild(coin2);
+            
+            //addObject(rewards,1100,0);
         }
         catch(CloneNotSupportedException e){
             e.printStackTrace();
