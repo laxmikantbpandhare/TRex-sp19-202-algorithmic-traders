@@ -8,6 +8,8 @@ As part of Simplicity, we started to first get basic things worked by applying t
 
 ### What am I planning to work on next?
 
-1. To add land obstacles, sky obstacles and rewards actors to the world relative to dinosaur movement.e
+To add land obstacles, sky obstacles and rewards to the world relative to dinosaur movement. To place objects such that the dinosaur can avoid obstacle and take rewards and can continue if obstacles are being avoided.
 
 ### What tasks are blocked waiting on another team member?
+
+Waiting for the composite pattern to be implemented by the team member 'Pallavi' so that I can create composite object and adding the objects on the screen. After the objects are added, collision feature will be added.
