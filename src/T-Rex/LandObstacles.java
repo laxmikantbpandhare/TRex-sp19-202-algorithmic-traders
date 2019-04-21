@@ -28,7 +28,7 @@ public class LandObstacles extends Composite
                 y = 440;
             else
                 y = 432;
-            System.out.println("x= "+x+",y= "+y);
+            //System.out.println("x= "+x+",y= "+y);
             getWorld().addObject((Actor)components.get(i),x,y);
             if(i==2)
                 x+= 25;

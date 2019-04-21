@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeBar extends Actor implements ILifeBar,ITRexObserver
+public class LifeBar extends Actor implements ITRexObserver
 {
     int life = 6;
     int lifeBarWidth = 120; 
@@ -20,19 +20,22 @@ public class LifeBar extends Actor implements ILifeBar,ITRexObserver
 
     public LifeBar()
     {
-        setImage(new GreenfootImage(lifeBarWidth + 2, lifeBarHeight + 2));
-        GreenfootImage myImage = getImage();
-        myImage.setColor(Color.WHITE);
-        myImage.drawRect(0, 0,lifeBarWidth + 1, lifeBarHeight + 1);
-    }
 
-    public GreenfootImage display()
+    }
+    
+    public void act() 
+    {
+        display();
+    } 
+
+    public void display()
     {
         setImage(new GreenfootImage(lifeBarWidth + 2, lifeBarHeight + 2));
         GreenfootImage myImage = getImage();
         myImage.setColor(Color.WHITE);
         myImage.drawRect(0, 0,lifeBarWidth + 1, lifeBarHeight + 1);
-        return myImage;
+        myImage.setColor(Color.RED);
+        myImage.fillRect(1, 1, life*pixelsPerLifePoint,lifeBarHeight);
     }
 
     public void looseLife()
@@ -40,14 +43,9 @@ public class LifeBar extends Actor implements ILifeBar,ITRexObserver
         life--;
     }
 
-    public int getLife()
-    {
-        return life;
-    }
     public void update(String type)
     {
         if(type.equals("Bird") ||type.equals("Cactus")||type.equals("Stones"))
-        looseLife();
-        
+        looseLife();  
     }
 }
