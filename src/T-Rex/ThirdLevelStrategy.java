@@ -30,8 +30,8 @@ public class ThirdLevelStrategy extends LevelStrategy
     
     public void addLandObstacles(){
         try{
-            landObstacles = new LandObstacles();
-            Cactus cactus1 = new Cactus();
+            landObstacles = new LandObstacles(1500);
+            Cactus cactus1 = new Cactus(-8);
             Cactus cactus2 = cactus1.clone();
             Cactus cactus3 = cactus1.clone();
             landObstacles.addChild(cactus1);

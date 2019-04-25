@@ -17,6 +17,7 @@ public class CurrentScore extends Actor implements IGameObserver
     private static final int RECORD_SCORE_TEXT_HEIGHT = 25;
     
     private int score;
+    private boolean secondLevelFlag = false;
     
     /**
      * Constructor for objects of class ScoreBoard.
@@ -36,7 +37,24 @@ public class CurrentScore extends Actor implements IGameObserver
      */
     public void act() 
     {
+        System.out.println("score is " + score);
         // Add your action code here.
+        if (score == 10 && !secondLevelFlag) {
+            MyWorld world = getWorldOfType(MyWorld.class);
+            ILevelStrategy currentStrategy = world.getStrategy();
+            LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
+            
+            world.removeObject((Actor)currentStrategy);
+            //world.setStrategy(new SecondLevelStrategy());
+            //world.addObject((Actor) new SecondLevelStrategy(), 67,25);
+            ILevelStrategy secondStrategy = new SecondLevelStrategy();
+            world.addObject((Actor) secondStrategy, 67,25);
+            secondStrategy.gameDisplay();
+            System.out.println("2nd level");
+            secondLevelFlag = true;
+            
+        }
+      
         
     }
     
@@ -69,9 +87,9 @@ public class CurrentScore extends Actor implements IGameObserver
            drawScores();
         }
     }
-    
     public int getScore()
     {
         return this.score;
     }
+    
 }

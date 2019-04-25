@@ -34,13 +34,18 @@ public class Composite extends Actor implements Component {
     public void remove(Component c) {
         components.remove(c) ;
     }
+    
+    public void removeall(){
+        components.clear();
+        //getWorld.remove();
+    }
      
     public Component getChild(int i) {
         return components.get( i ) ;
     }
     
     public void display(){
-        // add implementation below
+       
          for (Component obj  : components)
          {
              obj.display();

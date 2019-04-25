@@ -14,10 +14,18 @@ public class Cactus extends Leaf implements Cloneable
      */
     private int x;
     private int y;
+    private int speed;
+    
+    public Cactus(int speed) {
+        this.speed = speed;
+        GreenfootImage image = getImage();
+        image.scale(50,50);
+    }
+    
     public void act() 
     {
         // Add your action code here.
-        move(-8);
+        move(speed);
         x = getX();
         y = getY();
         //System.out.println("Cactus x= "+x+",y= "+y);
@@ -31,8 +39,5 @@ public class Cactus extends Leaf implements Cloneable
           return (Cactus) super.clone();
     }
     
-    public Cactus() {
-        GreenfootImage image = getImage();
-        image.scale(50,50);
-    }
+    
 }

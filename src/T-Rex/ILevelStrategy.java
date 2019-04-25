@@ -13,4 +13,5 @@ public interface ILevelStrategy
     void setObstacleSpeed();
     void setRewardsSpeed();
     void setRewardsScoreValue();
+    LandObstacles getLandObstacles();
 }

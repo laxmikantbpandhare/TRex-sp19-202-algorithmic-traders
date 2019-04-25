@@ -20,7 +20,7 @@ public class SecondLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
-        //addLandObstacles();
+        addLandObstacles();
         addRewards();
     };
     
@@ -30,13 +30,17 @@ public class SecondLevelStrategy extends LevelStrategy
     
     public void addLandObstacles(){
         try{
-            landObstacles = new LandObstacles();
-            Cactus cactus1 = new Cactus();
+            landObstacles = new LandObstacles(1500);
+            Cactus cactus1 = new Cactus(-12);
             Cactus cactus2 = cactus1.clone();
-            Cactus cactus3 = cactus1.clone();
+            //Cactus cactus3 = cactus1.clone();
             landObstacles.addChild(cactus1);
-            landObstacles.addChild(cactus2);
-            landObstacles.addChild(cactus3);
+            //landObstacles.addChild(cactus2);
+            //landObstacles.addChild(cactus3);
+            
+            landObstacles.removeall(landObstacles);
+            
+            landObstacles.addChild(new Stones(-12));
             getWorld().addObject(landObstacles,1100,0);
         } catch(CloneNotSupportedException e){
             e.printStackTrace();
