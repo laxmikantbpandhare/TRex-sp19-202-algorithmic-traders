@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CurrentScore extends Actor implements ITRexObserver
+public class CurrentScore extends Actor implements IGameObserver
 {
     private static final Color MAIN_COLOR = new Color(0x60, 0x60, 0x60); // dark grey
     
@@ -68,5 +68,10 @@ public class CurrentScore extends Actor implements ITRexObserver
            this.score=this.score+5;
            drawScores();
         }
+    }
+    
+    public int getScore()
+    {
+        return this.score;
     }
 }

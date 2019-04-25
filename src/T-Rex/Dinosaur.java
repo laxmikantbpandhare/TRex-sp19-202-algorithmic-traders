@@ -7,15 +7,15 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dinosaur extends Leaf implements ITRexSubject
+public class Dinosaur extends Leaf implements IGameSubject
 {
     //GifImage dino = new GifImage("dinosaur.gif");
     private final int GRAVITY = 1;
     private int velocity;
     private int delayTimer;
     private int page;
-    private ITRexObserver trexObserverReward;
-    private ITRexObserver trexObserverObstacle;
+    private IGameObserver trexObserverReward;
+    private IGameObserver trexObserverObstacle;
     private String touchedClassName;
     int x = 40;
     int y = 40;
@@ -139,8 +139,8 @@ public class Dinosaur extends Leaf implements ITRexSubject
     public void notifyObservers()
     {
         MyWorld world=(MyWorld)getWorld();
-        trexObserverReward=(ITRexObserver)world.getScoreBoard();
-        trexObserverObstacle=(ITRexObserver)world.getLifeBar();
+        trexObserverReward=(IGameObserver)world.getScoreBoard();
+        trexObserverObstacle=(IGameObserver)world.getLifeBar();
         this.trexObserverReward.update(this.touchedClassName);
         this.trexObserverObstacle.update(this.touchedClassName);
     }
