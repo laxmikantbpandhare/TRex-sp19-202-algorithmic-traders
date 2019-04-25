@@ -60,12 +60,12 @@ public class LandObstacles extends Composite
     public void removeall(LandObstacles obstacles){
         //getWorld.remove();
         System.out.println("Removing here");
-        //MyWorld world = getWorldOfType(MyWorld.class);
+        MyWorld world = getWorldOfType(MyWorld.class);
         System.out.println("Printing objects");
         //List<Actor> actors = new ArrayList<Actor>();
         //getWorld().getObjects(Clouds.class);
-        for (Object obj : getWorld().getObjects(Clouds.class)){ 
-            System.out.println(obj);
+        for (Object obj : world.getObjects(Cactus.class)){ 
+            getWorld().removeObject((Actor)obj);
         }
         //for (int i=0; i<actors.size(); i++){
         //    System.out.println(actors.get(i));
