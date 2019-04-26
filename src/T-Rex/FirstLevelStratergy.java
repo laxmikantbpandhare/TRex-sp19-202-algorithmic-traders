@@ -21,13 +21,13 @@ public class FirstLevelStratergy extends LevelStrategy
     public void act() 
     {
         // Add your action code here.
-        timer++;
-        if(timer==60)
-            addLandChilds(cactus1);
-        else if(timer==120)
-            addLandChilds(cactus2);
-        else if(timer==180)
-            addLandChilds(cactus3);
+        //timer++;
+        //if(timer==60)
+            //addLandChilds(cactus1);
+        //else if(timer==120)
+            //addLandChilds(cactus2);
+        //else if(timer==180)
+            //addLandChilds(cactus3);
     }
     
     public void gameDisplay(){
@@ -45,7 +45,7 @@ public class FirstLevelStratergy extends LevelStrategy
             cactus1 = new Cactus(-8);
             cactus2 = cactus1.clone();
             cactus3 = cactus1.clone();
-            //landObstacles.addChild(cactus1);
+            landObstacles.addChild(cactus1);
             //landObstacles.addChild(cactus2);
             //landObstacles.addChild(cactus3);
             getWorld().addObject(landObstacles,1100,0);
@@ -63,17 +63,12 @@ public class FirstLevelStratergy extends LevelStrategy
     public void addRewards(){
         rewards = new Rewards();
         try{
-            
-            Food food1 = new Food();
-            Food food2 = food1.clone();
             //addObject(food1,195,290);
             //addObject(food2,557,290);
             Coin coin1 = new Coin();
             Coin coin2 = coin1.clone();
             
-            rewards.addChild(food1);
             rewards.addChild(coin1);
-            rewards.addChild(food2);
             rewards.addChild(coin2);
             
         } catch(CloneNotSupportedException e){

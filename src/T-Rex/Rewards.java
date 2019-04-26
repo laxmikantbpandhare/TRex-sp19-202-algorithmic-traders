@@ -24,7 +24,7 @@ public class Rewards extends Composite
         int x = 400;
         for(i=0;i<components.size();i++){
             getWorld().addObject((Actor)components.get(i),x,Y);
-            x+= 300;            
+            x+= 350;            
         }
 
     }

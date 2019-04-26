@@ -18,6 +18,7 @@ public class CurrentScore extends Actor implements IGameObserver
     
     private int score;
     private boolean secondLevelFlag = false;
+    private boolean thirdLevelFlag = false;
     
     /**
      * Constructor for objects of class ScoreBoard.
@@ -39,7 +40,7 @@ public class CurrentScore extends Actor implements IGameObserver
     {
         System.out.println("score is " + score);
         // Add your action code here.
-        if (score == 10 && !secondLevelFlag) {
+        if (score == 100 && !secondLevelFlag) {
             MyWorld world = getWorldOfType(MyWorld.class);
             ILevelStrategy currentStrategy = world.getStrategy();
             LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
@@ -54,7 +55,20 @@ public class CurrentScore extends Actor implements IGameObserver
             secondLevelFlag = true;
             
         }
-      
+        if(score == 200 && !thirdLevelFlag){
+            System.out.println("Third level");
+            MyWorld world = getWorldOfType(MyWorld.class);
+            ILevelStrategy currentStrategy = world.getStrategy();
+            LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
+            ILevelStrategy thirdStrategy = new ThirdLevelStrategy();
+            world.addObject((Actor) thirdStrategy, 67,25);
+            world.removeObject((Actor)currentStrategy);
+            
+            
+            thirdStrategy.gameDisplay();
+            System.out.println("3rd level");
+            thirdLevelFlag = true;
+        }
         
     }
     
