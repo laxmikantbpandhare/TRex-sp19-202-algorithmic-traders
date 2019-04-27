@@ -25,17 +25,15 @@ public class LandObstacles extends Composite
      */
     public void act() 
     {
-        //if(time_counter%60==0)
         display();
-        //time_counter++;
     }    
 
     public void display() {
         int x1 = 1500;
         for(i=0;i<components.size();i++){
 
-            System.out.println("x1 = "+x1);
-            System.out.println("Current Actor ="+ (Actor)components.get(i));
+            //System.out.println("x1 = "+x1);
+            //System.out.println("Current Actor ="+ (Actor)components.get(i));
             Actor current = (Actor)components.get(i);
             if(current.getClass().getName().equals("Stones"))
                 y = 440;
@@ -45,13 +43,13 @@ public class LandObstacles extends Composite
             //if(time_counter%60==0)
             getWorld().addObject((Actor)components.get(i),x1,y);
             if(i==2){
-                x1+= 300;
+                x1+= 500;
                 System.out.println("x1 = "+x1);
                 System.out.println("x = "+x);
             }
 
-            //else
-               // x1+= 25;
+            // else
+            //     x1+= 25;
                //pause(1000);
         
     }

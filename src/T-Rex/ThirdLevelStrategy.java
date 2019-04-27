@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ThirdLevelStrategy extends LevelStrategy
 {
     private Rewards rewards;
+    private SkyObstacles skyObstacles;
     private LandObstacles landObstacles;
     /**
      * Act - do whatever the ThirdLevelStrategy wants to do. This method is called whenever
@@ -21,11 +22,26 @@ public class ThirdLevelStrategy extends LevelStrategy
     
     public void gameDisplay(){
         //addLandObstacles();
+        addSkyObstacles();
         addRewards();
     };
     
     public void addSkyObstacles(){
-        
+        try{
+            skyObstacles = new SkyObstacles();
+            Bird bird1 = new Bird();
+            Bird bird2 = bird1.clone();
+            Bird bird3 = bird1.clone();
+            skyObstacles.addChild(bird1);
+            skyObstacles.addChild(bird2);
+            skyObstacles.addChild(bird3);
+            //addObject(bird1,100,231);
+            //addObject(bird2,234,231);
+            //addObject(bird3,500,231);
+            getWorld().addObject(skyObstacles,1100,0);
+        } catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
     }
     
     public void addLandObstacles(){
