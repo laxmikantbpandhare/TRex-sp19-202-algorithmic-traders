@@ -19,10 +19,13 @@ public class Dinosaur extends Leaf implements IGameSubject
     private String touchedClassName;
     int x = 40;
     int y = 40;
+    int delay = 0;
+    int initialOffset =0;
+    int moveOffset = 7;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         velocity=0;
-        
+
     }
 
     /**
@@ -40,27 +43,42 @@ public class Dinosaur extends Leaf implements IGameSubject
         }
         fall();
         if (Greenfoot.isKeyDown("space") && getY() > 442) jump();
-        
+
         checkCollision();
+
+        if(delay>0){
+            // if(delay%2==0){
+            // turn(moveOffset);
+            // moveOffset = -6;
+            // }else{
+            // turn(moveOffset);
+            // moveOffset = 6;
+            // }
+            // initialOffset-=moveOffset;
+            turn(moveOffset);
+            moveOffset *= -1;
+            initialOffset -= moveOffset;
+            delay--;
+
+            //delay--;
+        }
+
     }
-    
+
     public void checkCollision() {
         if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
         || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
-            
+
             this.touchedClassName = touched.getClass().getName();
             notifyObservers();
-            
+            getWorld().removeObject(touched);
             //System.out.println(touched.getClass().getName());
-            if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
+            if(!(touchedClassName.equals("Coin") || touchedClassName.equals("Food")))
             {
-                getWorld().removeObject(touched);
+                if(delay==0)
+                    delay = 30;
             }
-            else{
-                Greenfoot.stop();
-            }
-                
         }
     }
 
@@ -136,6 +154,7 @@ public class Dinosaur extends Leaf implements IGameSubject
                     b=false;
         return !b;
     }
+
     public void notifyObservers()
     {
         MyWorld world=(MyWorld)getWorld();

@@ -27,6 +27,8 @@ public class LifeBar extends Actor implements IGameObserver,IGameSubject
     public void act() 
     {
         display();
+        if(life==0)
+            notifyObservers();
     } 
 
     public void display()
@@ -42,8 +44,6 @@ public class LifeBar extends Actor implements IGameObserver,IGameSubject
     public void looseLife()
     {
         life--;
-        if(life==0)
-            notifyObservers();
     }
 
     public void update(String type)
