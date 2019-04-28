@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CurrentScore extends Actor implements ITRexObserver
+public class CurrentScore extends Actor implements IGameObserver
 {
     private static final Color MAIN_COLOR = new Color(0x60, 0x60, 0x60); // dark grey
     
@@ -17,6 +17,8 @@ public class CurrentScore extends Actor implements ITRexObserver
     private static final int RECORD_SCORE_TEXT_HEIGHT = 25;
     
     private int score;
+    private boolean secondLevelFlag = false;
+    private boolean thirdLevelFlag = false;
     
     /**
      * Constructor for objects of class ScoreBoard.
@@ -36,7 +38,37 @@ public class CurrentScore extends Actor implements ITRexObserver
      */
     public void act() 
     {
+        System.out.println("score is " + score);
         // Add your action code here.
+        if (score == 100 && !secondLevelFlag) {
+            MyWorld world = getWorldOfType(MyWorld.class);
+            ILevelStrategy currentStrategy = world.getStrategy();
+            LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
+            
+            world.removeObject((Actor)currentStrategy);
+            //world.setStrategy(new SecondLevelStrategy());
+            //world.addObject((Actor) new SecondLevelStrategy(), 67,25);
+            ILevelStrategy secondStrategy = new SecondLevelStrategy();
+            world.addObject((Actor) secondStrategy, 67,25);
+            secondStrategy.gameDisplay();
+            System.out.println("2nd level");
+            secondLevelFlag = true;
+            
+        }
+        if(score == 200 && !thirdLevelFlag){
+            System.out.println("Third level");
+            MyWorld world = getWorldOfType(MyWorld.class);
+            ILevelStrategy currentStrategy = world.getStrategy();
+            LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
+            ILevelStrategy thirdStrategy = new ThirdLevelStrategy();
+            world.addObject((Actor) thirdStrategy, 67,25);
+            world.removeObject((Actor)currentStrategy);
+            
+            
+            thirdStrategy.gameDisplay();
+            System.out.println("3rd level");
+            thirdLevelFlag = true;
+        }
         
     }
     
@@ -69,4 +101,9 @@ public class CurrentScore extends Actor implements ITRexObserver
            drawScores();
         }
     }
+    public int getScore()
+    {
+        return this.score;
+    }
+    
 }

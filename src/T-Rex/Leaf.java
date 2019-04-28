@@ -24,6 +24,8 @@ public class Leaf extends Actor implements Component
     public void remove(Component c) {
         
     }
+    public void removeall(){
+    }
     public void act() 
     {
         // Add your action code here.

@@ -6,12 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeBar extends Actor implements ITRexObserver
+public class LifeBar extends Actor implements IGameObserver,IGameSubject
 {
     int life = 6;
     int lifeBarWidth = 120; 
     int lifeBarHeight = 15;
     int pixelsPerLifePoint = (int)lifeBarWidth / life;
+    IGameObserver gameOver;
 
     /**
      * Act - do whatever the LifeBar wants to do. This method is called whenever
@@ -26,6 +27,8 @@ public class LifeBar extends Actor implements ITRexObserver
     public void act() 
     {
         display();
+        if(life==0)
+            notifyObservers();
     } 
 
     public void display()
@@ -47,5 +50,14 @@ public class LifeBar extends Actor implements ITRexObserver
     {
         if(type.equals("Bird") ||type.equals("Cactus")||type.equals("Stones"))
         looseLife();  
+    }
+    public void notifyObservers()
+    {
+        GameOver endGame=new GameOver();
+        MyWorld world=(MyWorld)getWorld();
+        CurrentScore scoreBoard=world.getScoreBoard();
+        int score=scoreBoard.getScore();
+        endGame.makeImage(score);
+        world.addObject(endGame,world.getWidth()/2,world.getHeight()/2);
     }
 }

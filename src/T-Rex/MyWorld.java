@@ -15,6 +15,7 @@ public class MyWorld extends World
     private ILevelStrategy currentStrategy;
     private LifeBar lifebar = new LifeBar();
     private static int life;
+    private GameOver endGame;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -26,11 +27,12 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("background.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        landObstacles = new LandObstacles();
+        //landObstacles = new LandObstacles(1500);
         skyObstacles = new SkyObstacles();
         rewards = new Rewards();
         scoreBoard = new CurrentScore(120,120);
-        currentStrategy = new FirstLevelStratergy();
+        //currentStrategy = new FirstLevelStratergy();
+        setStrategy(new FirstLevelStratergy());
         addObject((Actor) currentStrategy, 67,25);
         currentStrategy.gameDisplay();
         prepare();
@@ -40,6 +42,12 @@ public class MyWorld extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    public void setStrategy(ILevelStrategy currentStrategy){
+        this.currentStrategy = currentStrategy;
+    }
+    public ILevelStrategy getStrategy(){
+        return currentStrategy;
+    }
     private void prepare()
     {
         try{
@@ -53,11 +61,11 @@ public class MyWorld extends World
             Bird bird1 = new Bird();
             Bird bird2 = bird1.clone();
             Bird bird3 = bird1.clone();
-            addObject(bird1,100,231);
-            addObject(bird2,234,231);
-            addObject(bird3,500,231);
-            Stones stones1 = new Stones();
-            Stones stones2 = stones1.clone();
+            //addObject(bird1,100,231);
+            //addObject(bird2,234,231);
+            //addObject(bird3,500,231);
+            //Stones stones1 = new Stones();
+            //Stones stones2 = stones1.clone();
             //addObject(stones1,499,443);
             //addObject(stones2,930,443);
             Clouds clouds1 = new Clouds();
@@ -95,6 +103,7 @@ public class MyWorld extends World
         
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
+        endGame=new GameOver();
     }
 
     public CurrentScore getScoreBoard()

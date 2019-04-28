@@ -20,24 +20,33 @@ public class SecondLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
-        //addLandObstacles();
+        addLandObstacles();
+        addSkyObstacles();
         addRewards();
     };
     
     public void addSkyObstacles(){
         
     }
-    
+    public LandObstacles getLandObstacles(){
+        return landObstacles;
+    }
     public void addLandObstacles(){
         try{
-            landObstacles = new LandObstacles();
-            Cactus cactus1 = new Cactus();
+            landObstacles = new LandObstacles(1500);
+            Cactus cactus1 = new Cactus(-8);
             Cactus cactus2 = cactus1.clone();
-            Cactus cactus3 = cactus1.clone();
+            //Cactus cactus3 = cactus1.clone();
+            
+            //landObstacles.addChild(cactus2);
+            //landObstacles.addChild(cactus3);
+            getWorld().addObject(landObstacles,1100,0);
+            landObstacles.removeall(landObstacles);
+            
             landObstacles.addChild(cactus1);
             landObstacles.addChild(cactus2);
-            landObstacles.addChild(cactus3);
-            getWorld().addObject(landObstacles,1100,0);
+            landObstacles.addChild(new Stones(-8));
+            //getWorld().addObject(landObstacles,1100,0);
         } catch(CloneNotSupportedException e){
             e.printStackTrace();
         }
@@ -47,16 +56,10 @@ public class SecondLevelStrategy extends LevelStrategy
         rewards = new Rewards();
         try{
             
-            Food food1 = new Food();
-            Food food2 = food1.clone();
-            //addObject(food1,195,290);
-            //addObject(food2,557,290);
             Coin coin1 = new Coin();
             Coin coin2 = coin1.clone();
             
-            rewards.addChild(food1);
             rewards.addChild(coin1);
-            rewards.addChild(food2);
             rewards.addChild(coin2);
             
         } catch(CloneNotSupportedException e){
