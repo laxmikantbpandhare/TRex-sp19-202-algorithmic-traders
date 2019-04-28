@@ -19,10 +19,13 @@ public class Dinosaur extends Leaf implements IGameSubject
     private String touchedClassName;
     int x = 40;
     int y = 40;
+    int delay;
+    int moveOffset;
     public Dinosaur() {
         getImage().scale(getImage().getWidth()*40/100, getImage().getHeight()*40/100);
         velocity=0;
-        
+        delay = 0;
+        moveOffset = 30;
     }
 
     /**
@@ -40,27 +43,35 @@ public class Dinosaur extends Leaf implements IGameSubject
         }
         fall();
         if (Greenfoot.isKeyDown("space") && getY() > 442) jump();
-        
+
         checkCollision();
+
+        if(delay>0){
+            turn(moveOffset);
+            moveOffset *= -1;
+            delay--;
+        }
+
     }
-    
+
     public void checkCollision() {
         if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
         || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
-            
+
             this.touchedClassName = touched.getClass().getName();
             notifyObservers();
+            getWorld().removeObject(touched);
             
-            //System.out.println(touched.getClass().getName());
-            if(touchedClassName.equals("Coin") || touchedClassName.equals("Food"))
+            if(touchedClassName.equals("Cactus") || touchedClassName.equals("Stones") || touchedClassName.equals("Bird"))
             {
-                getWorld().removeObject(touched);
+                Greenfoot.playSound("obstacles.wav");
+                if(delay==0)
+                    delay = 40;
             }
             else{
-                Greenfoot.stop();
+                Greenfoot.playSound("rewards.wav");
             }
-                
         }
     }
 
@@ -136,6 +147,7 @@ public class Dinosaur extends Leaf implements IGameSubject
                     b=false;
         return !b;
     }
+
     public void notifyObservers()
     {
         MyWorld world=(MyWorld)getWorld();
