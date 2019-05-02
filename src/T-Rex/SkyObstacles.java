@@ -20,28 +20,27 @@ public class SkyObstacles extends Composite
      */
     public void act() 
     {
-        // Add your action code here.
+        display();
     }
     
     public void display() {
-        int x1 = 500;
+        int x1 = 1200;
         for(i=0;i<components.size();i++){
-
-            //System.out.println("x1 = "+x1);
-            //System.out.println("Current Actor ="+ (Actor)components.get(i));
+            System.out.println("x1 = "+x1);
+            System.out.println("Current Actor ="+ (Actor)components.get(i));
+            Actor current = (Actor)components.get(i);
             y = 280;
-            //System.out.println("x= "+x+",y= "+y);
-            //if(time_counter%60==0)
             getWorld().addObject((Actor)components.get(i),x1,y);
-            if(i==2){
-                x1+= 300;
-                System.out.println("x1 = "+x1);
-                System.out.println("x = "+x);
+            if(i >= 2) {
+                System.out.println("i 2");
+                x1+= 250;
+            } else {
+                x1+= 750;
             }
-
-            //else
-               // x1+= 25;
-               //pause(1000);
+            
+            System.out.println("x1 = "+x1);
+            System.out.println("x = "+x);
+            
         
     }
         

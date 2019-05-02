@@ -21,33 +21,29 @@ public class ThirdLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
-        //addLandObstacles();
+        addLandObstacles();
         addSkyObstacles();
         addRewards();
     };
     
     public void addSkyObstacles(){
-        try{
+        try {
             skyObstacles = new SkyObstacles();
-            Bird bird1 = new Bird();
+            Bird bird1 = new Bird(-12);
             Bird bird2 = bird1.clone();
-            Bird bird3 = bird1.clone();
             skyObstacles.addChild(bird1);
-            skyObstacles.addChild(bird2);
-            skyObstacles.addChild(bird3);
-            //addObject(bird1,100,231);
-            //addObject(bird2,234,231);
-            //addObject(bird3,500,231);
-            getWorld().addObject(skyObstacles,1100,0);
-        } catch(CloneNotSupportedException e){
+            
+            getWorld().addObject(skyObstacles,1200,0);
+            } 
+        catch(CloneNotSupportedException e){
             e.printStackTrace();
-        }
+        }   
     }
     
     public void addLandObstacles(){
         try{
             landObstacles = new LandObstacles(1500);
-            Cactus cactus1 = new Cactus(-8);
+            Cactus cactus1 = new Cactus(-12);
             Cactus cactus2 = cactus1.clone();
             Cactus cactus3 = cactus1.clone();
             landObstacles.addChild(cactus1);
@@ -62,18 +58,12 @@ public class ThirdLevelStrategy extends LevelStrategy
     public void addRewards(){
         rewards = new Rewards();
         try{
-            
-            Food food1 = new Food();
-            Food food2 = food1.clone();
-            //addObject(food1,195,290);
-            //addObject(food2,557,290);
             Coin coin1 = new Coin();
             Coin coin2 = coin1.clone();
-            
-            rewards.addChild(food1);
+            Coin coin3 = coin1.clone();
             rewards.addChild(coin1);
-            rewards.addChild(food2);
             rewards.addChild(coin2);
+            rewards.addChild(coin3);
             
         } catch(CloneNotSupportedException e){
             e.printStackTrace();

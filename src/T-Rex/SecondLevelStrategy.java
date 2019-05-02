@@ -10,6 +10,7 @@ public class SecondLevelStrategy extends LevelStrategy
 {
     private Rewards rewards;
     private LandObstacles landObstacles;
+    private SkyObstacles skyObstacles;
     /**
      * Act - do whatever the SecondLevelStrategy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,13 +21,23 @@ public class SecondLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
-        addLandObstacles();
         addSkyObstacles();
+        addLandObstacles();
         addRewards();
     };
     
     public void addSkyObstacles(){
-        
+        try {
+            skyObstacles = new SkyObstacles();
+            Bird bird1 = new Bird(-8);
+            Bird bird2 = bird1.clone();
+            skyObstacles.addChild(bird1);
+            
+            getWorld().addObject(skyObstacles,1100,0);
+            } 
+        catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
     }
     public LandObstacles getLandObstacles(){
         return landObstacles;
@@ -36,17 +47,10 @@ public class SecondLevelStrategy extends LevelStrategy
             landObstacles = new LandObstacles(1500);
             Cactus cactus1 = new Cactus(-8);
             Cactus cactus2 = cactus1.clone();
-            //Cactus cactus3 = cactus1.clone();
-            
-            //landObstacles.addChild(cactus2);
-            //landObstacles.addChild(cactus3);
             getWorld().addObject(landObstacles,1100,0);
             landObstacles.removeall(landObstacles);
-            
-            landObstacles.addChild(cactus1);
-            landObstacles.addChild(cactus2);
             landObstacles.addChild(new Stones(-8));
-            //getWorld().addObject(landObstacles,1100,0);
+            getWorld().addObject(landObstacles,1100,0);
         } catch(CloneNotSupportedException e){
             e.printStackTrace();
         }

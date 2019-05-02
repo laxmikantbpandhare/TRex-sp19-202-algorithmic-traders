@@ -14,10 +14,11 @@ public class Bird extends Leaf implements Cloneable
      */
     private int x;
     private int y;
+    private int speed;
     public void act() 
     {
         // Add your action code here.
-        move(-3);
+        move(speed);
         x = getX();
         y = getY();
         if (x==0) {
@@ -30,7 +31,8 @@ public class Bird extends Leaf implements Cloneable
         return (Bird) super.clone();
     }
 
-    public Bird() {
+    public Bird(int speed) {
+        this.speed = speed;
         GreenfootImage image = getImage();
         image.scale(50,50);
     }
