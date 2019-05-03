@@ -9,6 +9,7 @@ Algorithmic Traders
 
 * [Busi Pallavi Reddy](https://github.com/busipallavi-reddy) - 013852800
 * [Prachi Chouksey](https://github.com/prachichouksey) - 013828945
+* [Laxmikant Bhaskar Pandhare](https://github.com/laxmikantbpandhare) - 013859989
 
 
 ## Project Name
@@ -54,6 +55,19 @@ https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=shari
 9. Created class diagram and sequence diagram for observer pattern.
 10. Contributed with Pallavi in creating Activity diagram.
 11. As a champion of XP value **"Feedback"**, I gave timely suggestions and feedback to the team regarding patterns and use cases for the game.
+
+**Laxmikant Pandhare** 
+
+1. We started with initial meeting with the team. We discussed requirements and the way through which we are going to develop the application.
+2. Did brainsorming with the colleagues and discussed different aspects and user stories.
+3. Initially added life image on the game and thought of implementing it. But, After long discussion we finalized the progress bar and going to reduce it once Dinosaur looses.
+4. Implemented Command Pattern to show the options and user will able to operate. The Client will select the operation and it will act accordingly.
+5. Performed unit testing for the command pattern.
+6. Created class diagram and sequence diagram for command pattern.
+7. Helped in creating the Ad video.
+8. Updated burndown chart according to worked hours.
+9. Performed end to end testing and made cosmetic changes.
+10. As part of XP value **"Courage"**, encouraged the team to discuss in case if they are facing any issues on the game implementation. So that, it will not impact on the sprint outcome.
 
 ## GitHub Repo:
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders
