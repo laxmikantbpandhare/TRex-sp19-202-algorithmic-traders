@@ -36,11 +36,12 @@ https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=shari
 3. Implemented Composite Pattern to set up the different Obstacles(Sky and Land) and Rewards(Coins and Food) in the game.
 4. Worked with Suyash to set up the composite pattern based on the different levels.
 5. Performed integration tests for composite and strategy pattern for different levels.
-6. Contributed to drafting Use cases.
-7. Drafted the Activity diagram for the T-Rex Game.
-8. Performed end to end testing and made cosmetic changes.
-9. Helped in creating the Ad video.
-10. As a champion of XP value **"Respect"**, I made sure that all the team member's suggestions were entertained and a proper discussion was held for each of the team member's inputs. I made sure that every person was valued as a team member.
+6. Added sounds for coins and losing life for dinosaur.
+7. Contributed to drafting Use cases.
+8. Drafted the Activity diagram for the T-Rex Game.
+9. Performed end to end testing and made cosmetic changes.
+10. Helped in creating the Ad video.
+11. As a champion of XP value **"Respect"**, I made sure that all the team member's suggestions were entertained and a proper discussion was held for each of the team member's inputs. I made sure that every person was valued as a team member.
 
 **Prachi Chouksey** 
 

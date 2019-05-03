@@ -4,6 +4,7 @@
 
 ### What tasks did I work on / complete?
 
+- Added the sounds for coin and losing life
 - Worked with Prachi to draft the use cases.
 - Drafted the Activity Diagram for the T-Rex Game.
 - Drew the class diagram for the composite pattern.
