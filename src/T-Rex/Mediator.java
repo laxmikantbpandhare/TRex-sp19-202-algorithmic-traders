@@ -40,7 +40,7 @@ public class Mediator extends Actor implements IMediator
         if(lifeBar == null)
             lifeBar=world.getLifeBar();
         int score=scoreBoard.getScore();
-        int life = 5;
+        int life = lifeBar.getLife();
         endGame.showGameInfo(score, life);
         world.addObject(endGame,world.getWidth()/2,world.getHeight()/2);
         Greenfoot.delay(170);
@@ -58,7 +58,7 @@ public class Mediator extends Actor implements IMediator
         if(lifeBar == null)
             lifeBar=world.getLifeBar();
         int score=scoreBoard.getScore();
-        int life = 5;
+        int life = lifeBar.getLife();
         changeLevel.showGameInfo(score, life);
         world.addObject(changeLevel,world.getWidth()/2,world.getHeight()/2);
         Greenfoot.delay(170);

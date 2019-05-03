@@ -1,18 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-//import java.awt.Color;
+import java.util.*;
 /**
  * Write a description of class LifeBar here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LifeBar extends Actor implements IGameObserver,IGameSubject
+public class LifeBar extends Actor implements IGameObserver
 {
     int life = 6;
     int lifeBarWidth = 120; 
     int lifeBarHeight = 15;
     int pixelsPerLifePoint = (int)lifeBarWidth / life;
-    IGameObserver gameOver;
+    private Mediator mediator = null;
 
     /**
      * Act - do whatever the LifeBar wants to do. This method is called whenever
@@ -21,14 +21,11 @@ public class LifeBar extends Actor implements IGameObserver,IGameSubject
 
     public LifeBar()
     {
-
     }
-    
+
     public void act() 
     {
         display();
-        if(life==0)
-            notifyObservers();
     } 
 
     public void display()
@@ -48,16 +45,21 @@ public class LifeBar extends Actor implements IGameObserver,IGameSubject
 
     public void update(String type)
     {
-        if(type.equals("Bird") ||type.equals("Cactus")||type.equals("Stones"))
-        looseLife();  
+        if(type.equals("Bird") ||type.equals("Cactus")||type.equals("Stones")){
+            looseLife();
+            if(life==0){
+                if (mediator == null){
+                    World myWorld = getWorld();
+                    List<Mediator> objects = myWorld.getObjects(Mediator.class);
+                    mediator = objects.get(0);
+                    mediator.endGame();
+                }
+            }
+        }
+
     }
-    public void notifyObservers()
-    {
-        GameInfo endGame=new GameInfo();
-        MyWorld world=(MyWorld)getWorld();
-        CurrentScore scoreBoard=world.getScoreBoard();
-        int score=scoreBoard.getScore();
-        //endGame.makeImage(score);
-        world.addObject(endGame,world.getWidth()/2,world.getHeight()/2);
+
+    public int getLife(){
+        return this.life;
     }
 }
