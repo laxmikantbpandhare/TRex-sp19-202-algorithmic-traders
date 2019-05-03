@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Clouds extends Leaf implements Cloneable
+public class Clouds extends Actor implements Cloneable
 {
     /**
      * Act - do whatever the Stones wants to do. This method is called whenever

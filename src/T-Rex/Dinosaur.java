@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dinosaur extends Leaf implements IGameSubject
+public class Dinosaur extends Actor implements IGameSubject
 {
-    //GifImage dino = new GifImage("dinosaur.gif");
+    
     private final int GRAVITY = 1;
     private int velocity;
     private int delayTimer;
@@ -58,20 +58,20 @@ public class Dinosaur extends Leaf implements IGameSubject
         if(touch(Coin.class) || touch(Food.class) || touch(Bird.class)
         || touch(Cactus.class) || touch(Stones.class)) {
             Actor touched = getOneIntersectingObject(Actor.class);
-
-            this.touchedClassName = touched.getClass().getName();
-            notifyObservers();
             getWorld().removeObject(touched);
-            
+            this.touchedClassName = touched.getClass().getName();
+
             if(touchedClassName.equals("Cactus") || touchedClassName.equals("Stones") || touchedClassName.equals("Bird"))
             {
-                //Greenfoot.playSound("obstacles.wav");
+                Greenfoot.playSound("obstacles.wav");
                 if(delay==0)
                     delay = 40;
             }
             else{
-                //Greenfoot.playSound("rewards.wav");
+                Greenfoot.playSound("rewards.wav");
             }
+
+            notifyObservers();
         }
     }
 
@@ -146,7 +146,7 @@ public class Dinosaur extends Leaf implements IGameSubject
                 if(Ai.getColorAt(xi-x_Offset,yi-y_Offset).getAlpha()>0 && i.getColorAt(xi,yi).getAlpha()>0)
                     b=false;
         return !b;
-    }
+    } 
 
     public void notifyObservers()
     {
