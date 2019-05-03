@@ -31,6 +31,8 @@ public class FirstLevelStratergy extends LevelStrategy
     }
     
     public void gameDisplay(){
+        addDino();
+        addClouds();
         addLandObstacles();
         addRewards();
     };

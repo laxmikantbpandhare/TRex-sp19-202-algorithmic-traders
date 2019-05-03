@@ -16,9 +16,8 @@ public class LevelStrategy extends Actor implements ILevelStrategy
     {
         // Add your action code here.
     }
-    
+
     public void gameDisplay(){
-        
     };
     public void addLandObstacles(){};
     public void addSkyObstacles(){};
@@ -28,5 +27,27 @@ public class LevelStrategy extends Actor implements ILevelStrategy
     public void setRewardsScoreValue(){};
     public LandObstacles getLandObstacles(){
         return null;
+    }
+
+    public void addClouds()
+    {
+        try{
+            Clouds clouds1 = new Clouds();
+            Clouds clouds2 = clouds1.clone();
+            Clouds clouds3 = clouds1.clone();
+            Clouds clouds4 = clouds1.clone();
+            getWorld().addObject(clouds1,156,82);
+            getWorld().addObject(clouds2,315,89);
+            getWorld().addObject(clouds3,884,172);
+            getWorld().addObject(clouds4,740,106);
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void addDino()
+    {
+        Dinosaur dinosaur = new Dinosaur();
+        getWorld().addObject(dinosaur,74,442);
     }
 }

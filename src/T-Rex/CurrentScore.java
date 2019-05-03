@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class CurrentScore here.
  * 
@@ -9,17 +9,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CurrentScore extends Actor implements IGameObserver
 {
     private static final Color MAIN_COLOR = new Color(0x60, 0x60, 0x60); // dark grey
-    
+
     private static final int CURRENT_SCORE_TEXT_HEIGHT = 60;
-    
+
     private static final int RECORD_TEXT_HEIGHT = 25;
-    
+
     private static final int RECORD_SCORE_TEXT_HEIGHT = 25;
-    
+
     private int score;
     private boolean secondLevelFlag = false;
     private boolean thirdLevelFlag = false;
-    
+    private Mediator mediator = null;
+
     /**
      * Constructor for objects of class ScoreBoard.
      * <p>
@@ -32,6 +33,7 @@ public class CurrentScore extends Actor implements IGameObserver
         score=0;
         drawScores();
     }
+
     /**
      * Act - do whatever the CurrentScore wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,21 +42,21 @@ public class CurrentScore extends Actor implements IGameObserver
     {
         System.out.println("score is " + score);
         // Add your action code here.
-        if (score == 100 && !secondLevelFlag) {
-            MyWorld world = getWorldOfType(MyWorld.class);
-            ILevelStrategy currentStrategy = world.getStrategy();
-            LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
-            
-            world.removeObject((Actor)currentStrategy);
-            //world.setStrategy(new SecondLevelStrategy());
-            //world.addObject((Actor) new SecondLevelStrategy(), 67,25);
-            ILevelStrategy secondStrategy = new SecondLevelStrategy();
-            world.addObject((Actor) secondStrategy, 67,25);
-            secondStrategy.gameDisplay();
-            System.out.println("2nd level");
-            secondLevelFlag = true;
-            
-        }
+        // if (score == 100 && !secondLevelFlag) {
+        // MyWorld world = getWorldOfType(MyWorld.class);
+        // ILevelStrategy currentStrategy = world.getStrategy();
+        // LandObstacles currentLandObstacles = currentStrategy.getLandObstacles();
+
+        // world.removeObject((Actor)currentStrategy);
+        // //world.setStrategy(new SecondLevelStrategy());
+        // //world.addObject((Actor) new SecondLevelStrategy(), 67,25);
+        // ILevelStrategy secondStrategy = new SecondLevelStrategy();
+        // world.addObject((Actor) secondStrategy, 67,25);
+        // secondStrategy.gameDisplay();
+        // System.out.println("2nd level");
+        // secondLevelFlag = true;
+
+        // }
         if(score == 200 && !thirdLevelFlag){
             System.out.println("Third level");
             MyWorld world = getWorldOfType(MyWorld.class);
@@ -63,47 +65,64 @@ public class CurrentScore extends Actor implements IGameObserver
             ILevelStrategy thirdStrategy = new ThirdLevelStrategy();
             world.addObject((Actor) thirdStrategy, 67,25);
             world.removeObject((Actor)currentStrategy);
-            
-            
+
             thirdStrategy.gameDisplay();
             System.out.println("3rd level");
             thirdLevelFlag = true;
         }
-        
+
     }
-    
-    
+
     private void drawString(String text, int x, int y, Color color, int height)
     {
         GreenfootImage scoreImage=getImage();
         if(this.score==0){
-        scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+            scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+        }
+        else
+        {
+            scoreImage.clear();
+            scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
+        }
+
     }
-    else
-    {
-        scoreImage.clear();
-        scoreImage.drawImage(new GreenfootImage(text, height, color, new Color (0,0,0,0)), x, y);
-    }
-    
-    }
-    
+
     private void drawScores()
     {
         String currentScore=Integer.toString(this.score);
         drawString(currentScore, 0, 0, MAIN_COLOR, CURRENT_SCORE_TEXT_HEIGHT);
-        
+
     }
+
     public void update(String type)
     {
-       if(type.equals("Coin"))
-       {
-           this.score=this.score+5;
-           drawScores();
+        if(type.equals("Coin"))
+        {
+            this.score=this.score+5;
+            drawScores();
+
+            if(this.score==30){
+                if (mediator == null){
+                    World myWorld = getWorld();
+                    List<Mediator> objects = myWorld.getObjects(Mediator.class);
+                    mediator = objects.get(0);
+                }
+                mediator.changeLevel();
+            }
+            else if(this.score==60){
+                if (mediator == null){
+                    World myWorld = getWorld();
+                    List<Mediator> objects = myWorld.getObjects(Mediator.class);
+                    mediator = objects.get(0);
+                }
+                mediator.completeGame();
+            }
         }
     }
+
     public int getScore()
     {
         return this.score;
     }
-    
+
 }

@@ -21,6 +21,8 @@ public class SecondLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
+        addDino();
+        addClouds();
         addSkyObstacles();
         addLandObstacles();
         addRewards();

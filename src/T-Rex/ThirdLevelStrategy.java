@@ -21,6 +21,8 @@ public class ThirdLevelStrategy extends LevelStrategy
     }
     
     public void gameDisplay(){
+        addDino();
+        addClouds();
         addLandObstacles();
         addSkyObstacles();
         addRewards();
