@@ -65,12 +65,12 @@ public class Dinosaur extends Leaf implements IGameSubject
             
             if(touchedClassName.equals("Cactus") || touchedClassName.equals("Stones") || touchedClassName.equals("Bird"))
             {
-                Greenfoot.playSound("obstacles.wav");
+                //Greenfoot.playSound("obstacles.wav");
                 if(delay==0)
                     delay = 40;
             }
             else{
-                Greenfoot.playSound("rewards.wav");
+                //Greenfoot.playSound("rewards.wav");
             }
         }
     }

@@ -15,7 +15,7 @@ public class MyWorld extends World
     private ILevelStrategy currentStrategy;
     private LifeBar lifebar = new LifeBar();
     private static int life;
-    private GameOver endGame;
+    private GameInfo endGame;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -100,7 +100,7 @@ public class MyWorld extends World
         
         Dinosaur dinosaur = new Dinosaur();
         addObject(dinosaur,74,442);
-        endGame=new GameOver();
+        endGame=new GameInfo();
     }
 
     public CurrentScore getScoreBoard()

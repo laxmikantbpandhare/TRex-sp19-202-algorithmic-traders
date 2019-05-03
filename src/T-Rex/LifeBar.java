@@ -53,11 +53,11 @@ public class LifeBar extends Actor implements IGameObserver,IGameSubject
     }
     public void notifyObservers()
     {
-        GameOver endGame=new GameOver();
+        GameInfo endGame=new GameInfo();
         MyWorld world=(MyWorld)getWorld();
         CurrentScore scoreBoard=world.getScoreBoard();
         int score=scoreBoard.getScore();
-        endGame.makeImage(score);
+        //endGame.makeImage(score);
         world.addObject(endGame,world.getWidth()/2,world.getHeight()/2);
     }
 }
