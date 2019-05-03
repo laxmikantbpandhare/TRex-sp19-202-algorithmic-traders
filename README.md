@@ -13,7 +13,7 @@ Algorithmic Traders
 
 ## Project Name
 
-T-Rex
+#### T-Rex
 
 ## Project Description
 
