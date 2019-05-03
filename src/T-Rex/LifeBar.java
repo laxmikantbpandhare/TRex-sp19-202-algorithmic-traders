@@ -12,7 +12,7 @@ public class LifeBar extends Actor implements IGameObserver
     int lifeBarWidth = 120; 
     int lifeBarHeight = 15;
     int pixelsPerLifePoint = (int)lifeBarWidth / life;
-    private Mediator mediator = null;
+    private IMediator mediator = null;
 
     /**
      * Act - do whatever the LifeBar wants to do. This method is called whenever

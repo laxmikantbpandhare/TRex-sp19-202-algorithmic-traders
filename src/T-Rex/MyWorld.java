@@ -12,7 +12,7 @@ public class MyWorld extends World
     private ILevelStrategy currentStrategy;
     private LifeBar lifebar;
     private static int life;
-    private Mediator mediator;
+    private IMediator mediator;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -47,8 +47,8 @@ public class MyWorld extends World
     }
     
     public void createLevel(){
-        addObject((Actor)mediator,0,0);
-        addObject((Actor) currentStrategy, 67,25);
+        addObject((Actor)mediator,1100,0);
+        addObject((Actor) currentStrategy, 1100,0);
         currentStrategy.gameDisplay();
     }
 
