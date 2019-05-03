@@ -1,5 +1,5 @@
 
-# Team Project Repo 
+# Team Project - Game: T-Rex
 
 ## Team Name
 
@@ -10,11 +10,12 @@ Algorithmic Traders
 * [Busi Pallavi Reddy](https://github.com/busipallavi-reddy) - 013852800
 * [Prachi Chouksey](https://github.com/prachichouksey) - 013828945
 * [Laxmikant Bhaskar Pandhare](https://github.com/laxmikantbpandhare) - 013859989
+* [Wamique Masood Ansari](https://github.com/wamiquem) - 013764595
 
 
 ## Project Name
 
-#### T-Rex
+### T-Rex
 
 ## Project Description
 
@@ -69,6 +70,20 @@ https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=shari
 8. Updated burndown chart according to worked hours.
 9. Performed end to end testing and made cosmetic changes.
 10. As part of XP value **"Courage"**, encouraged the team to discuss in case if they are facing any issues on the game implementation. So that, it will not impact on the sprint outcome.
+
+**Wamique Ansari**
+
+1. Our team met in the library to had an initial project discussion. We had discussions and compared various platforms like greenfoot and processing that we could use to develop our project . We decided to use greenfoot for our project to develop the game T-Rex. Discussed various features, use cases and patterns that needs to be implemented in the project.
+2. To start with, added some of the actors needed for our T-Rex project and did some activities on these actors and explored more on greenfoot.
+3. Explored prototype pattern and various ways to implement it, applied the same in a very simple way to get clone of some actors needed instead of creating from scratch.
+4. Performed unit testing for the Prototype pattern for some actors and did knowledge transfer to the team members so that anyone can create clone of the objects needed in the same way.
+5. After Pallavi was done with implementing the composite pattern, I added land, sky obstacles and rewards to the world relative to dinosaur movement to get the basic game working so that other team members can start working on other features.
+6. Added the collision feature and get the actor with which the dinosaur is collided. Accordingly, other team members will add observers pattern for life and score. In case of collision, removing the obstacles and rewards. Did basic testing around the same to give a go ahead to the team. This was done as part of the user story "As a player, I want to collect rewards".
+7. Added shaking effect to the dinosaur when it collides with the obstacles to make player more aware that the dinosaur is loosing life.
+8. Needed to work on the game info screen to display after the game completes or the level changes. As there were many class's objects involved in implementing this feature, the classes were getting tight coupled. Explored various patterns in which this can be avoided. Figured out that mediator pattern could be applied to maintain loose coupling between the classes. Studied and explored mediator pattern and applied the same to implement this feature. This was done as part of the user story "As a player, I want to see level change screen".
+9. After final integration, perform testing to check that new features are working fine and no existing functionalies are broken.
+10. Created class diagram for the mediator pattern and sequence diagram for the user story "As a player, I want to collect rewards". Worked with the team to update project journal and ad Video.
+11. As part of the XP value **"Simplicity"**, I ensured that things are kept simple and at the same time progress is made. Also, tasks discussed should be only done, nothing extra. Then we will move step by step further to achieve the same goal.
 
 ## GitHub Repo:
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders
