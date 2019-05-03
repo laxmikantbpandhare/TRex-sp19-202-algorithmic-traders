@@ -106,3 +106,6 @@ https://github.com/nguyensjsu/sp19-202-algorithmic-traders/projects/1
 
 ## Sprint Task Sheet:
 https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
+
+## UML Diagrams
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/tree/master/docs
