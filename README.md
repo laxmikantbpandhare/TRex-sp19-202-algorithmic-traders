@@ -11,6 +11,7 @@ Algorithmic Traders
 * [Prachi Chouksey](https://github.com/prachichouksey) - 013828945
 * [Laxmikant Bhaskar Pandhare](https://github.com/laxmikantbpandhare) - 013859989
 * [Wamique Masood Ansari](https://github.com/wamiquem) - 013764595
+* [Suyash Srivastava](https://github.com/Suyash906) - 013591474
 
 
 ## Project Name
@@ -84,6 +85,18 @@ https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=shari
 9. After final integration, perform testing to check that new features are working fine and no existing functionalies are broken.
 10. Created class diagram for the mediator pattern and sequence diagram for the user story "As a player, I want to collect rewards". Worked with the team to update project journal and ad Video.
 11. As part of the XP value **"Simplicity"**, I ensured that things are kept simple and at the same time progress is made. Also, tasks discussed should be only done, nothing extra. Then we will move step by step further to achieve the same goal.
+
+**Suyash Srivastava**
+1. Brainstormed game ideas with team and finally zeroed in on Trex game.
+2. Explored greenfoot framework and discussed patterns involved in the game with the team.
+3. Worked on the dinosaur jump feature.
+4. Worked on strategy pattern to implement game levels.
+5. Pair programmed with Pallavi to define obstacles location and rewards location for all the levels.
+6. Discussed with teammates to define game quit scenario.
+7. Performed through testing of game.
+8. Created the class and sequence diagram of strategy pattern.
+9. Worked on video add developmemt.
+10. As a part of XP value **"Communication"**, I ensured that the team meets for discussions at regular intervals and also interacts on slack
 
 ## GitHub Repo:
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders
