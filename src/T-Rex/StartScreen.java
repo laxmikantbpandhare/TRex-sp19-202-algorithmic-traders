@@ -8,7 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StartScreen extends World
 {
-
+    IOptionInvoker playbutton;
+    IOptionInvoker quitbutton;
+    IOptionCommand startGame;
+    IOptionCommand quitGame;
+    MyWorld tRex;
     /**
      * Constructor for objects of class StartScreen.
      * 
@@ -21,16 +25,16 @@ public class StartScreen extends World
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
 
-        IOptionInvoker playbutton = new PlayButton();
-        IOptionInvoker quitbutton = new QuitButton();
+        playbutton = new PlayButton();
+        quitbutton = new QuitButton();
 
         addObject((PlayButton)playbutton,332,213);
         addObject((QuitButton)quitbutton,643,200);
 
-        IOptionCommand startGame = new OptionCommand();
-        IOptionCommand quitGame = new OptionCommand();
+        startGame = new OptionCommand();
+        quitGame = new OptionCommand();
 
-        MyWorld tRex = new MyWorld();
+        tRex = new MyWorld();
 
         startGame.setReceiver(
             new IOptionReceiver() {

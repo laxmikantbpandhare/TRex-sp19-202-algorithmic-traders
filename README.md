@@ -3,7 +3,7 @@
 
 ## Team Name
 
-Algorithmic Traders
+**Algorithmic Traders**
 
 ## Team Members
 
@@ -15,11 +15,10 @@ Algorithmic Traders
 
 
 ## Project Name
-
 ### T-Rex
 
 ## Project Description
-
+Dinosaur, T-Rex is out in the wild and running around. He got some life intially which might get drained out when he hits some obstacles. He can also gain rewards and food by catching them. User can track his score and life based on the obstacles crossed and rewards collected. There are two levels in the game which user can cross based on the score. User wins the game at score of 200 and has the option to replay the game.
 
 
 ## Project Progress
@@ -27,7 +26,8 @@ Algorithmic Traders
 ### Burndown Map
 https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
 
-### Project Dashboard
+### UI Mock screen
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/mockui/TRex_Home.jpeg
 
 ### Individual Contributions
 
