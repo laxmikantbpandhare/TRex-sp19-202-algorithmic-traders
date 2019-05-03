@@ -41,12 +41,12 @@ public class GameInfo extends Actor
             image.drawString("Score:" + score, 300, 200);
         }
         else{
-            if(score == 30){
+            if(score == 100){
                 image.drawString("Level 1 Completed!!!", 300, 150);
                 image.drawString("Score:" + score, 300, 200);
                 image.drawString("Remaining Life:" + life, 300, 250);
             }
-            else if (score == 60){
+            else if (score == 200){
                 image.drawString("Level 2 Completed!!!", 300, 150);
                 image.drawString("Game Completed!!!", 300, 200);
                 image.drawString("Total Score:" + score, 300, 250);

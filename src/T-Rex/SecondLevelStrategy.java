@@ -64,9 +64,13 @@ public class SecondLevelStrategy extends LevelStrategy
             
             Coin coin1 = new Coin();
             Coin coin2 = coin1.clone();
-            
+            Food food1 = new Food();
+            Food food2 = food1.clone();
+
             rewards.addChild(coin1);
+            rewards.addChild(food1);
             rewards.addChild(coin2);
+            rewards.addChild(food2);
             
         } catch(CloneNotSupportedException e){
             e.printStackTrace();
