@@ -106,3 +106,43 @@ https://github.com/nguyensjsu/sp19-202-algorithmic-traders/projects/1
 
 ## Sprint Task Sheet:
 https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
+
+## UML Diagrams
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/tree/master/docs
+
+## Sprint Meeting Report
+
+**Week1**
+
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-Suyash906.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1%20-%20laxmikantbpandhare.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-busipallavi-reddy.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-prachichouksey.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-wamiquem.md
+
+**Week2**
+
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2%20-%20laxmikantbpandhare.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-Suyash906.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-wamiquem.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-prachichouksey.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week%202-busipallavi-reddy.md
+
+**Week3**
+
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3%20-%20laxmikantbpandhare.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-Suyash906.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-busipallavi-reddy.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-prachichouksey.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-wamiquem.md
+
+**Week4** 
+
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4%20-%20laxmikantbpandhare.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-Suyash906.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-busipallavi-reddy.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-prachichouksey.md
+https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-wamiquem.md
+
+## Ad Video
+https://www.youtube.com/watch?v=AU99mCW95cg

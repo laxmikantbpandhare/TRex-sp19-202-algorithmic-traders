@@ -22,9 +22,6 @@ public class LevelStrategy extends Actor implements ILevelStrategy
     public void addLandObstacles(){};
     public void addSkyObstacles(){};
     public void addRewards(){};
-    public void setObstacleSpeed(){};
-    public void setRewardsSpeed(){};
-    public void setRewardsScoreValue(){};
     public LandObstacles getLandObstacles(){
         return null;
     }

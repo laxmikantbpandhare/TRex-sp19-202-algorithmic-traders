@@ -24,11 +24,9 @@ public class Cactus extends Leaf implements Cloneable
     
     public void act() 
     {
-        // Add your action code here.
         move(speed);
         x = getX();
         y = getY();
-        //System.out.println("Cactus x= "+x+",y= "+y);
         if (x==0) {
             setLocation(999,y);
         }
