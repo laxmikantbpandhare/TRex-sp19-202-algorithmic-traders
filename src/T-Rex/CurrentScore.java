@@ -70,7 +70,7 @@ public class CurrentScore extends Actor implements IGameObserver
             this.score=this.score+5;
             drawScores();
 
-            if(this.score==100){
+            if(this.score==60){
                 if (mediator == null){
                     World myWorld = getWorld();
                     List<Mediator> objects = myWorld.getObjects(Mediator.class);
@@ -78,7 +78,7 @@ public class CurrentScore extends Actor implements IGameObserver
                 }
                 mediator.changeLevel();
             }
-            else if(this.score==200){
+            else if(this.score==120){
                 if (mediator == null){
                     World myWorld = getWorld();
                     List<Mediator> objects = myWorld.getObjects(Mediator.class);

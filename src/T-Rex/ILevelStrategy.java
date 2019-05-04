@@ -10,8 +10,5 @@ public interface ILevelStrategy
     void addLandObstacles();
     void addSkyObstacles();
     void addRewards();
-    void setObstacleSpeed();
-    void setRewardsSpeed();
-    void setRewardsScoreValue();
     LandObstacles getLandObstacles();
 }

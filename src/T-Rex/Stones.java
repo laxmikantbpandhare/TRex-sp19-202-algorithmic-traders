@@ -17,7 +17,6 @@ public class Stones extends Leaf implements Cloneable
     private int speed;
     public void act() 
     {
-        // Add your action code here.
         move(speed);
         x = getX();
         y = getY();
