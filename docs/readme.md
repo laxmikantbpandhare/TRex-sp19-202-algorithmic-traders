@@ -21,6 +21,8 @@ Scoreboard and lives of the user are updated using observer pattern.
 To start/quit the game, this pattern is used to send commands to the game.
 
 ## UML Diagrams
+![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Class%20Diagram_T-Rex.png)
+
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Activity%20Diagram.png)
 
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/UseCase%20Diagram.png)
