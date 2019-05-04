@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rewards extends Composite
 {
-    public final int Y = 290;
     //public int x;
     int i;
     /**
@@ -22,8 +21,14 @@ public class Rewards extends Composite
 
     public void display() {
         int x = 400;
+        int y;
+        
         for(i=0;i<components.size();i++){
-            getWorld().addObject((Actor)components.get(i),x,Y);
+            Actor current = (Actor)components.get(i);
+            y = 290;
+            if(current.getClass().getName().equals("Food"))
+                y = 320;
+            getWorld().addObject((Actor)components.get(i),x,y);
             x+= 350;            
         }
 

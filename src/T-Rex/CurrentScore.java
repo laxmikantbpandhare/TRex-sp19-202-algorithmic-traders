@@ -65,7 +65,7 @@ public class CurrentScore extends Actor implements IGameObserver
 
     public void update(String type)
     {
-        if(type.equals("Coin"))
+        if(type.equals("Coin") || type.equals("Food"))
         {
             this.score=this.score+5;
             drawScores();
