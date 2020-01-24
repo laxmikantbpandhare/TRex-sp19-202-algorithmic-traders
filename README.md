@@ -1,164 +1,164 @@
+# Game : T-Rex
 
-# Team Project - Game: T-Rex
-
-## Team Name
-
-**Algorithmic Traders**
-
-## Team Members
-
-* [Busi Pallavi Reddy](https://github.com/busipallavi-reddy) - 013852800
-* [Prachi Chouksey](https://github.com/prachichouksey) - 013828945
-* [Laxmikant Bhaskar Pandhare](https://github.com/laxmikantbpandhare) - 013859989
-* [Wamique Masood Ansari](https://github.com/wamiquem) - 013764595
-* [Suyash Srivastava](https://github.com/Suyash906) - 013591474
-
-
-## Project Name
-### T-Rex
-
-## Project Description
 Dinosaur, T-Rex is out in the wild and running around. He got some life intially which might get drained out when he hits some obstacles. He can also gain rewards and food by catching them. User can track his score and life based on the obstacles crossed and rewards collected. There are two levels in the game which user can cross based on the score. User wins the game at score of 200 and has the option to replay the game.
 
+## Members 
+   | Name                           | SJSU ID    |
+   |--------------------------------|------------|
+   | **Laxmikant Bhaskar Pandhare** | 013859989  |
+   | **Prachi Chouksey**            | 013828945  |
+   | **Pallavi Reddy**              | 013728923  |
+   | **Wamiquw Ansari**             | 013848211  |
+   | **Suyash Srivastava**          | 013591474  |
 
-## Project Progress
 
-### Burndown Map
-https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
 
-### UI Mock screen
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/mockui/TRex_Home.jpeg
 
-### Individual Contributions
 
-**Busi Pallavi Reddy** 
+## System Architecture Diagram
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/SystemArchitectureDiagram.png)
 
-1. Brainstormed with team members for the user stories and game features for the T-Rex game.
-2. Implemented the feature of making the dinosaur run, by making the GIF as multiple frames and made the obstacles move. 
-3. Implemented Composite Pattern to set up the different Obstacles(Sky and Land) and Rewards(Coins and Food) in the game.
-4. Worked with Suyash to set up the composite pattern based on the different levels.
-5. Performed integration tests for composite and strategy pattern for different levels.
-6. Added sounds for coins and losing life for dinosaur.
-7. Contributed to drafting Use cases.
-8. Drafted the Activity diagram for the T-Rex Game.
-9. Performed end to end testing and made cosmetic changes.
-10. Helped in creating the Ad video.
-11. As a champion of XP value **"Respect"**, I made sure that all the team member's suggestions were entertained and a proper discussion was held for each of the team member's inputs. I made sure that every person was valued as a team member.
+## Jenkins Pipeline
 
-**Prachi Chouksey** 
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/CI_CD_Pipeline.png)
 
-1. Created user stories in the task sheet for the T-Rex game.
-2. Created initial world for the game with basic actors.
-3. Implemented Observer pattern in scoreboard and lifebar to update values when collision of dinosaur occurs with obstacles and rewards.
-4. Performed unit testing for the observer pattern.
-5. Implemented Game Over screen when the dinosaur loses all life.
-6. Performed unit testing for game over feature.
-7. Updated task sheet with the contribution hours in the task sheet.
-8. Created use case specification document for the user stories.
-9. Created class diagram and sequence diagram for observer pattern.
-10. Contributed with Pallavi in creating Activity diagram.
-11. As a champion of XP value **"Feedback"**, I gave timely suggestions and feedback to the team regarding patterns and use cases for the game.
 
-**Laxmikant Pandhare** 
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/CICD_Slack.png)
 
-1. We started with initial meeting with the team. We discussed requirements and the way through which we are going to develop the application.
-2. Did brainsorming with the colleagues and discussed different aspects and user stories.
-3. Initially added life image on the game and thought of implementing it. But, After long discussion we finalized the progress bar and going to reduce it once Dinosaur looses.
-4. Implemented Command Pattern to show the options and user will able to operate. The Client will select the operation and it will act accordingly.
-5. Performed unit testing for the command pattern.
-6. Created class diagram and sequence diagram for command pattern.
-7. Helped in creating the Ad video.
-8. Updated burndown chart according to worked hours.
-9. Performed end to end testing and made cosmetic changes.
-10. As part of XP value **"Courage"**, encouraged the team to discuss in case if they are facing any issues on the game implementation. So that, it will not impact on the sprint outcome.
+First we created a docker image of jenkins but didn't work as expected as there are lot of configuratio and compatibility issues as it was running on docker.
+<ol>
+<li> Next we have taken an EC2-instance and made it a Jenkins-server by installing Java, Jenkins by default the jenkins was running  on port 8080 logged into Jenkins as admin and by installing the custom plugins .</li>
+<li> Installed plugins like SSHAgent, Slack notification, Docker in global plugin tab which are required for the project \
+<li> Next created a new Multi-Brach pipeline in the jenkins for which we connected to our Github project. </li>
+<li> Wrote pipeline script in JenkinsPipeline. </li>
+<li> Launched web-hooks from Github to the JenkinsServer so that when ever a push comes the pipeline will start automatically.
+<li> Jenkins does the unit-Testing and if the test cases are passing it will create a docker image and push it into Docker-hub
+   and now the pushed image is downloaded and a container is created. </li>
+<li> Api(new-man) test are ran on the container and if the test cases passes then the images are deployed into the Pre-built        EC2-instances. </li>
+<li> Slack notifications are sent on every stage. </li>
+</ol>
 
-**Wamique Ansari**
+ #### Jenkins to Custom-kubernetes-cluster
+<ol>
+<li>  The same steps are followed as above till step 6 </li> 
+<li>  The pod.yaml and service.yaml files are then deployed which has latest pod versioning to the Kube-master where they are        created using shell commands from jenkins </li> 
+ </ol>
+  
 
-1. Our team met in the library to had an initial project discussion. We had discussions and compared various platforms like greenfoot and processing that we could use to develop our project . We decided to use greenfoot for our project to develop the game T-Rex. Discussed various features, use cases and patterns that needs to be implemented in the project.
-2. To start with, added some of the actors needed for our T-Rex project and did some activities on these actors and explored more on greenfoot.
-3. Explored prototype pattern and various ways to implement it, applied the same in a very simple way to get clone of some actors needed instead of creating from scratch.
-4. Performed unit testing for the Prototype pattern for some actors and did knowledge transfer to the team members so that anyone can create clone of the objects needed in the same way.
-5. After Pallavi was done with implementing the composite pattern, I added land, sky obstacles and rewards to the world relative to dinosaur movement to get the basic game working so that other team members can start working on other features.
-6. Added the collision feature and get the actor with which the dinosaur is collided. Accordingly, other team members will add observers pattern for life and score. In case of collision, removing the obstacles and rewards. Did basic testing around the same to give a go ahead to the team. This was done as part of the user story "As a player, I want to collect rewards".
-7. Added shaking effect to the dinosaur when it collides with the obstacles to make player more aware that the dinosaur is loosing life.
-8. Needed to work on the game info screen to display after the game completes or the level changes. As there were many class's objects involved in implementing this feature, the classes were getting tight coupled. Explored various patterns in which this can be avoided. Figured out that mediator pattern could be applied to maintain loose coupling between the classes. Studied and explored mediator pattern and applied the same to implement this feature. This was done as part of the user story "As a player, I want to see level change screen".
-9. After final integration, perform testing to check that new features are working fine and no existing functionalies are broken.
-10. Created class diagram for the mediator pattern and sequence diagram for the user story "As a player, I want to collect rewards". Worked with the team to update project journal and ad Video.
-11. As part of the XP value **"Simplicity"**, I ensured that things are kept simple and at the same time progress is made. Also, tasks discussed should be only done, nothing extra. Then we will move step by step further to achieve the same goal.
+## Kubernetes
 
-**Suyash Srivastava**
-1. Brainstormed game ideas with team and finally zeroed in on Trex game.
-2. Explored greenfoot framework and discussed patterns involved in the game with the team.
-3. Worked on the dinosaur jump feature.
-4. Worked on strategy pattern to implement game levels.
-5. Pair programmed with Pallavi to define obstacles location and rewards location for all the levels.
-6. Discussed with teammates to define game quit scenario.
-7. Performed through testing of game.
-8. Created the class and sequence diagram of strategy pattern.
-9. Worked on video add developmemt.
-10. As a part of XP value **"Communication"**, I ensured that the team meets for discussions at regular intervals and also interacts on slack
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/AWS_Kubernetes_Nodes.png)
 
-## GitHub Repo:
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/Custom_Kuber_Cluster.jpeg)
 
-## Project Task Board:
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/projects/1
+First understood the basic architecture of kubernetes master its components like kube-ctl, kube-proxy, kubelet.controller-manager, etcd, Api-server, container run time and how services and pods work
 
-## Sprint Task Sheet:
-https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
+#### First Attempt
 
-## UML Diagrams
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/tree/master/docs
+In first deployment we used google kubernetes engine, its has a very simple deployment as google creates service and load balancer on your behalf all you have to do was deploy the docker-image as pods
 
-## Sprint Meeting Report
 
-**Week1**
+#### Second Attempt
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-Suyash906.md
+<ol>
+<li> In second deployment we used Amazon EKS service </li>
+<li> As as per documentation we created a ec-2 instance gave it iam role permissions and gave the EKS the k8 permissions </li>
+<li> when we trying to connct to kubernetes master via the EC2-instance from our end we were getting error's as it was unable to connect. </li>
+<li> So after some Online research we found this wa happening to a lot of people and the reason being the problem with the AmazonAuthentication(aws-iam-configuration API) Services where the token we were getting was null and this prevented us from geeting into kubernetes master </li>
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1%20-%20laxmikantbpandhare.md
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-busipallavi-reddy.md
+#### Third Attempt
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-prachichouksey.md
+<li> In third deployment we started building our own kubernetes cluster and in this first we have taken 1 instances </li>
+<li> we installed kubernetes, Docker on this node created two more nodes and from the 1st instance ami and now we logged into kubernetes master which is 1st node and installed etcd, changed the config kube-conig </li>
+<li> In the worker nodes we changed the kubelet to connect to master node now we created pod.yaml and Deploymentservice.yaml, the Deployment.yaml is config to create and connect to the Network Load-balancer in aws which worked for us </li>
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-wamiquem.md
+#### Conclsuion:
+GKE: GKE was the easiest deployment, as it provides load-balancer and Service for us automatically
 
-**Week2**
+EKS: EKS has a lot of configuration to make and there were lot of compatibility issues for us and a lot of steps when compared to GKE
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2%20-%20laxmikantbpandhare.md
+Custom Kubernetes: This is the one which has taken most of our time as we had to change a lot of configuartions for it to work properly and the main challeges we faced is the attachement of nlb to the service
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-Suyash906.md
+## CQRS (Command Query Responsibility Segregation)
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-wamiquem.md
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/CQRS_Architecture.png)
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-prachichouksey.md
+The NoteShare application has been split into one part that handles all the writing and one that handles all the reading. This is usually done through Command and Query messages/objects.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week%202-busipallavi-reddy.md
+The rationale of doing the segregation is that for many problems having the same conceptual model for commands and queries leads to a more complex model that does neither well. So separating the reoteShare application allows us to scale each of the service call independently.
+If during exams, the reads of Notes increase we can let more servers handle the read requests.
 
-**Week3**
+EventSourcing is persisting the state of the NoteShare application, however instead of just persisting the latest state (way its done in relational database) all state changes that has happened over time to the notes are stored.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3%20-%20laxmikantbpandhare.md
+Creating Notes:
+<ol>
+   <li> Client issues a POST  call to “/note/cmd” </li>
+   <li>API interface receives the request and converts the payload  to a CommandMessage and passes it on to the responsible command handler </li>
+   <li>The handler creates an event, and then persists it to the eventlog. </li>
+   <li> The eventbus is then notified of the event and publishes it to all listeners of that type of event. </li>
+</ol>
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-Suyash906.md
+Reading Notes:
+<ol>
+   <li> Client issues a GET  call to “/note” </li>
+   <li> API interface receives the request and handles the event using event handler. </li>
+   <li> The JSON file for all the notes is read from the s3 bucket and rendered at client side. </li>
+   <li> User is able to view all the notes. </li>
+  </ol>
+    
+### Comparison with traditional Read/Write in Database vs Event based CQRS
+In case of traditional Read/Write to database, the application does a lot of transformation in case of both read and write operations. While in case of Event based CQRS application, the read happens in extremely fast manner. The split architecture allows non-blocking read and write.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-busipallavi-reddy.md
+### Challenges/Concerns
+Adding CQRS to a domain that doesn’t have much difference between read and write, increases the complexity of the application and the events handling a little tedious.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-prachichouksey.md
+## Grafana
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-wamiquem.md
+As we have more than 20 instances for our project, metric watch became hectic as we have to switch between different instances and accounts so in order to overcome this we used grafana which was deployed on Centos instance using Docker . Grafana helped us to aggregate all the metrics at one place.
 
-**Week4** 
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/Grafana-Dashboard.png)
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4%20-%20laxmikantbpandhare.md
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/Grafana-Instances.png)
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-Suyash906.md
+## Application Dashboard
+A glimpse of the application
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-busipallavi-reddy.md
+### Signup
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-prachichouksey.md
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/signup.png)
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-wamiquem.md
+### Login
 
-## Ad Video
-https://www.youtube.com/watch?v=AU99mCW95cg
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/login.png)
+
+### Notes View
+
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/NoteShare-Home.png)
+
+### Notes
+
+![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/NoteShare-CreateNote.png)
+
+### Edit Profile Before
+
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/edit%20Profile%20Before.png)
+
+### Edit Profile After
+
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/edit%20Profile%20After.png)
+
+### View Other's Notes
+
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/view%20others%20notes.png)
+
+
+### Search
+
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/search.png)
+
+### follow and unfollow
+
+![alt text](https://github.com/laxmikantbpandhare/fa19-281-cloud-traders/blob/master/images/follow%20unfollow.png)
+
+
