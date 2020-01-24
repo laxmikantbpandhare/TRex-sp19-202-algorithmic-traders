@@ -16,11 +16,14 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
 
 
 ## Burndown Chart
+
+https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
+
 ![alt text](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/Burndown%20Chart.png)
 
-## Jenkins Pipeline
+## UI Mock screen
 
-![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/CI_CD_Pipeline.png)
+![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/mockui/TRex_Home.jpeg)
 
 
 ![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/CICD_Slack.png)
