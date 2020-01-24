@@ -7,8 +7,8 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
    |--------------------------------|------------|
    | **Laxmikant Bhaskar Pandhare** | 013859989  |
    | **Prachi Chouksey**            | 013828945  |
-   | **Pallavi Reddy**              | 013728923  |
-   | **Wamiquw Ansari**             | 013848211  |
+   | **Pallavi Reddy**              | 013852800  |
+   | **Wamiquw Ansari**             | 013764595  |
    | **Suyash Srivastava**          | 013591474  |
 
 
