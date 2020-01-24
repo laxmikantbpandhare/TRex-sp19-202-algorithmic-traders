@@ -15,8 +15,8 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
 
 
 
-## System Architecture Diagram
-![alt text](https://github.com/nguyensjsu/fa19-281-cloud-traders/blob/master/images/SystemArchitectureDiagram.png)
+## Burndown Chart
+![alt text](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/Burndown%20Chart.png)
 
 ## Jenkins Pipeline
 
