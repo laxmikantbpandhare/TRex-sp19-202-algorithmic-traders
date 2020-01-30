@@ -5,7 +5,7 @@
 [![Demo CountPages alpha](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif)](https://www.youtube.com/watch?v=XFNGYsLeGJA)
 
 
-<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif" height="250" width="250">
+<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif" height="750" width="750">
 
 ## Introduction
 
