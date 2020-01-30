@@ -1,6 +1,6 @@
 # Game : T-Rex
 
-[![Demo CountPages alpha](https://gifs.com/gif/t-rex-game-cmpe202-implemented-design-patterns-5QxOEA)](https://www.youtube.com/watch?v=XFNGYsLeGJA)
+[![Demo CountPages alpha](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif)](https://www.youtube.com/watch?v=XFNGYsLeGJA)
 
 <iframe src='//gifs.com/embed/t-rex-game-cmpe202-implemented-design-patterns-5QxOEA' frameborder='0' scrolling='no' width='640px' height='360px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
 
