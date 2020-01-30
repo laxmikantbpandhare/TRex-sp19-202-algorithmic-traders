@@ -1,7 +1,5 @@
 # Game : T-Rex
 
-[![Alt text](https://www.youtube.com/watch?v=VID)
-
 Dinosaur, T-Rex is out in the wild and running around. He got some life intially which might get drained out when he hits some obstacles. He can also gain rewards and food by catching them. User can track his score and life based on the obstacles crossed and rewards collected. There are two levels in the game which user can cross based on the score. User wins the game at score of 200 and has the option to replay the game.
 
 ## Members 
