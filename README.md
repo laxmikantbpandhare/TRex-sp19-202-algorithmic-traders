@@ -2,8 +2,6 @@
 
 [![Demo CountPages alpha](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif)](https://www.youtube.com/watch?v=XFNGYsLeGJA)
 
-<iframe src='//gifs.com/embed/t-rex-game-cmpe202-implemented-design-patterns-5QxOEA' frameborder='0' scrolling='no' width='640px' height='360px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
-
 
 Dinosaur, T-Rex is out in the wild and running around. He got some life intially which might get drained out when he hits some obstacles. He can also gain rewards and food by catching them. User can track his score and life based on the obstacles crossed and rewards collected. There are two levels in the game which user can cross based on the score. User wins the game at score of 200 and has the option to replay the game.
 
