@@ -2,7 +2,7 @@
 
 ## Demo 
 
-[![Demo CountPages alpha](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif)](https://www.youtube.com/watch?v=XFNGYsLeGJA)
+[![Demo CountPages alpha](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif){:height="36px" width="36px"}](https://www.youtube.com/watch?v=XFNGYsLeGJA)
 
 ## Introduction
 
