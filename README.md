@@ -16,6 +16,10 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
    | **Pallavi Reddy**              | 013852800  |
    | **Wamiquw Ansari**             | 013764595  |
    | **Suyash Srivastava**          | 013591474  |
+   
+   
+## About T-Rex's Story:  https://www.youtube.com/watch?v=AU99mCW95cg
+
 
 
 
