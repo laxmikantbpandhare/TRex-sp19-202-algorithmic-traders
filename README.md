@@ -1,11 +1,5 @@
 # Game : T-Rex
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-```
 
 ## Demo 
 
@@ -247,8 +241,9 @@ To start/quit the game, this pattern is used to send commands to the game.
 ## What tasks are blocked waiting on another team member?
 * Nothing as such.
 
-```
-Wamique Ansari
+
+```diff
++ Wamique Ansari
 ```
 
 ### What tasks did I work on / complete?
