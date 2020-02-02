@@ -26,6 +26,9 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
 
 https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=sharing
 
+
+![alt text](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/BurnDown.png)
+
 ![alt text](https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/Burndown%20Chart.png)
 
 ## UI Mock screen
