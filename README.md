@@ -165,7 +165,7 @@ To start/quit the game, this pattern is used to send commands to the game.
 - Get design elememts required to implement the project. 
 
 ### What tasks are blocked waiting on another team member?
-
+- Nothing as such.
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1%20-%20laxmikantbpandhare.md
 
