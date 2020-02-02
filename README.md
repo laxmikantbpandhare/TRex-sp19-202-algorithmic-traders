@@ -20,7 +20,7 @@ Dinosaur, T-Rex is out in the wild and running around. He got some life intially
    
 ## About T-Rex's Story:  https://www.youtube.com/watch?v=AU99mCW95cg
 
-
+[<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/t-rex%20video.gif" height="550" width="1000">](https://www.youtube.com/watch?v=AU99mCW95cg)
 
 ## Burndown Chart
 
