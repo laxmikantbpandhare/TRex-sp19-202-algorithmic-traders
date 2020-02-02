@@ -1,5 +1,7 @@
 # Game : T-Rex
 
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+
 ## Demo 
 
 [<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif" height="550" width="1000">](https://www.youtube.com/watch?v=XFNGYsLeGJA)
