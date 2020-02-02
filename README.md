@@ -1,7 +1,5 @@
 # Game : T-Rex
 
-<span style="background-color: #FFFF00">Marked text</span>
-
 ## Demo 
 
 [<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif" height="550" width="1000">](https://www.youtube.com/watch?v=XFNGYsLeGJA)
@@ -242,7 +240,9 @@ To start/quit the game, this pattern is used to send commands to the game.
 ## What tasks are blocked waiting on another team member?
 * Nothing as such.
 
+```
 ### Wamique Ansari
+```
 
 ### What tasks did I work on / complete?
 
