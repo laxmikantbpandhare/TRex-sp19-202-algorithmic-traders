@@ -94,6 +94,7 @@ https://drive.google.com/file/d/1Qa-W-6w4d4a4CYtXIrRqybHqqfZFgUG0/view?usp=shari
 11. As part of the XP value **"Simplicity"**, I ensured that things are kept simple and at the same time progress is made. Also, tasks discussed should be only done, nothing extra. Then we will move step by step further to achieve the same goal.
 
 **Suyash Srivastava**
+
 1. Brainstormed game ideas with team and finally zeroed in on Trex game.
 2. Explored greenfoot framework and discussed patterns involved in the game with the team.
 3. Worked on the dinosaur jump feature.
@@ -151,7 +152,10 @@ To start/quit the game, this pattern is used to send commands to the game.
 
 ## Week1
 
-**Suyash Shrivastava**
+
+```diff
++ Suyash Shrivastava
+```
 
 ### What tasks did I work on / complete?
 - Had brainstorming session with the team to discuss project ideas and finalize the developement framework.
@@ -169,7 +173,10 @@ To start/quit the game, this pattern is used to send commands to the game.
 - Nothing as such.
 
 
-**Laxmikant Pandhare**
+
+```diff
++ Laxmikant Pandhare
+```
 
 ### What tasks did I work on / complete?
 
@@ -197,7 +204,9 @@ To start/quit the game, this pattern is used to send commands to the game.
 * Nothing as such.
 
 
-**Pallavi Reddy**
+```diff
++ Pallavi Reddy
+```
 
 ### What tasks did I work on / complete?
 
@@ -223,8 +232,9 @@ To start/quit the game, this pattern is used to send commands to the game.
 * For the first week, there was no blocked tasks on anyone. 
 * I faced a challenge on making the GIF work. Turns out that using the GIFImage class of greenfoot for a GIF, the transparent running GIF was getting overlapped and the dinosaur looked as if it had many legs. To overcome this, then I split the GIF to its individual frames and loaded the images to give the feeling of a GIF. 
 
-
-**Prachi Chouksey**
+```diff
++ Prachi Chouksey
+```
 
 ## What tasks did I work on / complete?
 
@@ -246,7 +256,7 @@ To start/quit the game, this pattern is used to send commands to the game.
 + Wamique Ansari
 ```
 
-### What tasks did I work on / complete?
+  ### What tasks did I work on / complete?
 
 1. Our team met in the library to had an initial project discussion. We had discussions and compared various platforms like greenfoot and processing that we could use to develop our project . We decided to use greenfoot for our project to develop a game.
 2. Next, we had different ideas and came up with different games that can be developed and is doable using the greenfoot platform. We had different game ideas like Sequence Board Game, Flappy birds, T-Rex and Road Fighter.
