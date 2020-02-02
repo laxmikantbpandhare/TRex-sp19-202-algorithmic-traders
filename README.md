@@ -240,7 +240,7 @@ To start/quit the game, this pattern is used to send commands to the game.
 ## What tasks are blocked waiting on another team member?
 * Nothing as such.
 
-**Wamique Ansari**
+### Wamique Ansari
 
 ### What tasks did I work on / complete?
 
