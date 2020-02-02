@@ -74,12 +74,3 @@ To start/quit the game, this pattern is used to send commands to the game.
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/ClassDiagram-ObserverPattern_Scoreboard_Lifebar.png)
 
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Strategy_Class_Diagram.png)
-
-## UI wireframe
-
-![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/mockui/TRex_Home.jpeg)
-
-
-
-
-
