@@ -167,15 +167,100 @@ To start/quit the game, this pattern is used to send commands to the game.
 ### What tasks are blocked waiting on another team member?
 - Nothing as such.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1%20-%20laxmikantbpandhare.md
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-busipallavi-reddy.md
+**Laxmikant Pandhare**
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-prachichouksey.md
+### What tasks did I work on / complete?
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-wamiquem.md
+* We started with initial meeting with the team. We discussed requirements and the way through which we are going to develop the application.
+* Discussed different game ideas, features and the pattern that can be included in each and every game. We discussed below mentioned game and its features.
+    - T-Rex
+    - Road Fighter
+    - Sequence
+    - Flappy Bird
+* At the end of the discussion, we finalized the T-Rex Game.
+* Did brainsorming with the colleagues and discussed different aspects and user stories.
+* Discussed about the design patterns that would be utilized in various parts of the game.
+* Picked up the scrum value of "Courage", to ensure that each speaks whenver there is a obstacles in the developemnt. Through this the development plan will not get impacted.
+* Explored the Green Foot tool.
+* Discussed about the future plan and divided the work in the team accordingly.
 
-**Week2**
+
+
+### What am I planning to work on next?
+* Planned to get familiar with Green foot tool and start with inital coding in the tool, just for understanding the variable functionalities of Green Foot.
+* Implementation of features discussed in the spring planning meeting.
+
+
+### What tasks are blocked waiting on another team member?
+* Nothing as such.
+
+
+**Pallavi Reddy**
+
+### What tasks did I work on / complete?
+
+* Worked with team members to decide on what use case we are going to pick as our team project. Talked about the various platforms - Green Foot and Processing.
+* Explored the various game ideas like "T-Rex", "Road Fighter", "Sequence", "Flappy Bird". Discusses broadly the use cases of each.
+* Finalized the T-Rex Game.
+* Brainstormed with team members for the user stories and game features.
+* Discussed about the design patterns that would cater the various requirements of the user stories.
+* Picked up the scrum value of "RESPECT", to ensure that each team member is respected for the efforts that they put into the project.
+* Explored the Green Foot tool.
+* As a part of creating the world, figured out how to add GIFs. Added the T-Rex dinosaur to the world.
+
+
+
+### What am I planning to work on next?
+
+* Setting up the composite pattern for the objects to be added to the world.
+
+  
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+
+* For the first week, there was no blocked tasks on anyone. 
+* I faced a challenge on making the GIF work. Turns out that using the GIFImage class of greenfoot for a GIF, the transparent running GIF was getting overlapped and the dinosaur looked as if it had many legs. To overcome this, then I split the GIF to its individual frames and loaded the images to give the feeling of a GIF. 
+
+
+**Prachi Chouksey**
+
+## What tasks did I work on / complete?
+
+* Brainstormed categories of the project first namely Machine Learning, Web Application, Gaming engine and finalised on Gaming Engine.
+* Discussed game ideas like T-Rex, Road Fighter, Board game and concluded to build T-Rex game.
+* Listed all the possible use cases and features at a high level.
+* Discussed the design patterns that can be implemented for various features.
+* Decided to allocate one design principle per team member in order to ensure all the design principles are followed throughout the project. I will be responsible for "Feedback" so that every team member is honest and open in providing feedback to others.
+
+## What am I planning to work on next?
+* Understanding Greenfoot tool better and documenting use cases.
+* Implementing features finalised during the planning meeting.
+
+## What tasks are blocked waiting on another team member?
+* Nothing as such.
+
+**Wamique Ansari**
+
+### What tasks did I work on / complete?
+
+1. Our team met in the library to had an initial project discussion. We had discussions and compared various platforms like greenfoot and processing that we could use to develop our project . We decided to use greenfoot for our project to develop a game.
+2. Next, we had different ideas and came up with different games that can be developed and is doable using the greenfoot platform. We had different game ideas like Sequence Board Game, Flappy birds, T-Rex and Road Fighter.
+3. Also, we discussed various desing patterns that could be incorporated in these games.
+4. We finalized the game 'T-Rex' for our group project that would be developed in greenfoot.
+5. We explored the greenfoot tool.
+
+Moreover, every team member picked a XP value and I picked Simplicity. I would ensure that we do what is needed, but no more and we will create something we are proud of.
+
+### What am I planning to work on next?
+
+1. To learn more about greenfoot to implement our solution.
+2. To learn about prototype design pattern. In our solution, some actors objects are supposed to be created multiple times. In such a case, we can use prototype pattern to create clone from the existing object instead of creating the object from scratch everytime using factory method pattern
+
+### What tasks are blocked waiting on another team member?
+1. Nothing as such.
+
+## Week2
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2%20-%20laxmikantbpandhare.md
 
