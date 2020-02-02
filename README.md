@@ -1,5 +1,7 @@
 # Game : T-Rex
 
+<span style="background-color: #FFFF00">Marked text</span>
+
 ## Demo 
 
 [<img src="https://github.com/laxmikantbpandhare/TRex-sp19-202-algorithmic-traders/blob/master/docs/trex.gif" height="550" width="1000">](https://www.youtube.com/watch?v=XFNGYsLeGJA)
