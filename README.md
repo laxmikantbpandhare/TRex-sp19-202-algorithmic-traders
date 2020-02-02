@@ -148,9 +148,24 @@ To start/quit the game, this pattern is used to send commands to the game.
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Strategy_Class_Diagram.png)
 
 
-**Week1**
+## Week1
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1-Suyash906.md
+**Suyash Shrivastava**
+
+### What tasks did I work on / complete?
+- Had brainstorming session with the team to discuss project ideas and finalize the developement framework.
+- The game which caught our attention were T-rex, Road Fighter, Sequence Card Game and Flappy Bird. We evaluated each of these in terms of complexity of UI and the design patterns involved.
+- We finally zeroed in on the T-Rex game.  It's a 2D game in which the T-rex dinasour has to dodge the obstacles coming its way while running from left to right on the screen. The score is incremneted constantly. The game ends as soon as the T-rex collides with an obstacle.
+- We decided to use Greenfoot to develop the game.
+- Each one of us have picked one XP value to make the development process as smooth as possible. I have chosen "Communication". It is my resposibility to ensure that the team meets for discussions at regular intervals. Also, we have a group on slack for project discussion.
+- Discussed the features of the game with the implementaion details at length with the team. We gained better understanding of the game after the discussion. This allowed us to divide the tasks among team members judiciously.
+
+### What am I planning to work on next?
+- Invest time to learn and get better understanding of Greenfoot.
+- Get design elememts required to implement the project. 
+
+### What tasks are blocked waiting on another team member?
+
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week1%20-%20laxmikantbpandhare.md
 
