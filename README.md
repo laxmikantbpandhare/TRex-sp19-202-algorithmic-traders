@@ -281,66 +281,207 @@ Moreover, every team member picked a XP value and I picked Simplicity. I would e
 + Laxmikant Pandhare
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2%20-%20laxmikantbpandhare.md
+### What tasks did I work on / complete?
+
+* We started meeting and discussed about the implemented tasks in 15 minutes. After that, we discussed about the    implementation and the way through which we are going to develop the patterns ans it's dependency on the others.
+
+* Initially added life image on the game and thought of implementing it. But, After long discussion we finalized the progress bar and going to reduce it once Dinosaur looses.
+
+* Discussed different aspects of the projects.
+* Did brainsorming with the colleagues and discussed different aspects and user stories.
+* Discussed about the future plan and divided the work in the team accordingly.
+* At the end of the discussion, we finalized our tasks for this week.
+
+
+### What am I planning to work on next?
+* I have planned to implement Game Over functionality once the life count gets Zero.
+* Implementation of features discussed in the spring planning meeting.
+
+
+### What tasks are blocked waiting on another team member?
+* Waiting for Observer pattern to implement by team member. Once collision happends with dinosaur or bird, the observer will
+notify and decorator reduce th life accordingly.
 
 ```diff
 + Suyash Shrivastava
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-Suyash906.md
+### What tasks did I work on / complete?
+- I browsed through Greenfoot documentation and watched few videos on youtube to develop a basic understanding of the Greenfoot.
+- To kickstart development, each one of the team member started working on small task like making the T-rex jump, making the objects move, etc. I worked on jumping faeture of T-rex.
+- I worked on defining the levels of the game using startegy pattern. There are three levels in the game. Each one has a separate strategy in terms of Trex speed, obstacles and points gain. I have added the obsctactles and rewards on all stratgies.
+
+### What am I planning to work on next?
+- I will define the exact locations where the obstacles will be introduced so that Composite pattern could be applied to display the screen.
+
+### What tasks are blocked waiting on another team member?
+- Nothing as such.
 
 ```diff
 + Wamique Ansari
 ```
+### What tasks did I work on / complete?
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-wamiquem.md
+1. Tried to explore greenfoot by going through various documentations and tutorials. Started to get hands on by adding actors to the greenfoot world and performing various activities on these actors, learned how to work with image scalings etc.
+2. Added some of the actors needed for our T-Rex world project and did some activities on these actors.
+3. Tried understanding prototype pattern and various type to implement it, applied the same in a very simple way to get clone of some actors needed instead of creating from scratch.
+
+As part of Simplicity, we started to first get basic things worked by applying the greenfoot concepts to make actors perform so that we have a simple working model and then we will enhance by adding design patterns and more logics.
+
+### What am I planning to work on next?
+
+To add land obstacles, sky obstacles and rewards to the world relative to dinosaur movement. To place objects such that the dinosaur can avoid obstacle and take rewards and can continue if obstacles are being avoided.
+
+### What tasks are blocked waiting on another team member?
+
+Waiting for the composite pattern to be implemented by the team member 'Pallavi' so that I can create composite object and adding the objects on the screen. After the objects are added, collision feature will be added.
 
 ```diff
 + Prachi Chouksey
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-prachichouksey.md
+## What tasks did I work on / complete?
+
+* Worked on user stories and use cases for T-Rex game.
+* Added all the backlog items and tasks for the team in google task sheet.
+* Created mock ui for game.
+* Estimated the time to complete tasks and udpated in sprint task sheet.
+* As part of XP value "Feedback", encouraged the team to provide feedback on the game design to each other and also gave feedback on the level strategy.
+* Started working on user story- As a user, I want to collect rewards and see the live score based on rewards.
+
+## What am I planning to work on next?
+* Implement observer pattern to check the rewards collected by T-rex.
+* Update live score of the user based on the rewards collected.
+
+## What tasks are blocked waiting on another team member?
+* Waiting for composite pattern to be setup to implement observer pattern on dinosaur and rewards.
 
 ```diff
 + Pallavi Reddy
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week%202-busipallavi-reddy.md
 
-**Week3**
+### What tasks did I work on / complete?
+
+- Set up the composite pattern for the T-Rex world. 
+- With the discussion with team mates, set the composites as Rewards, Sky Obstacles and Land Obstacles.
+- Decided with team members how the level settings and difficulty would be.
+- Discussed with team members what how the life of the dinosaur would go about.
+
+### What am I planning to work on next?
+
+- To be adding the composite pattern based on the levels
+
+  
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+
+- Waiting on Suyash to add the composite pattern based on the levels.
+
+## Week3
 
 
 ```diff
 + Laxmikant Pandhare
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3%20-%20laxmikantbpandhare.md
+### What tasks did I work on / complete?
+
+* We started meeting and discussed about the implemented tasks in 15 minutes. After that, we discussed about the implementation and the way through which we are going to develop the remaining part od the project.
+* Decided to implement Command Pattern at the start of the game. The Client will select the operation and it will act accordinglt.
+* Discussed different aspects of the projects.
+* Started working on user story- As a user, I want to play a game by selecting the 'Play' button at the start of the game.
+* As part of XP value "Courage", encouraged the team to discuss in case if they are facing any issues on the game implementation. So that, it will not impact on the sprint outcome.
+* Did brainsorming with the colleagues and discussed different aspects and user stories.
+* Discussed about the future plan and divided the work in the team accordingly. Also, planned about the final documentation that we have to do as part of last Sprint.
+* At the end of the discussion, we finalized our final tasks for this last sprint.
+
+
+### What am I planning to work on next?
+* I have planned to implement some additional functionality.
+* I have planned to proceed with the documentation and testing part of the project.
+
+
+### What tasks are blocked waiting on another team member?
+* Nothing as such.
 
 ```diff
 + Suyash Shrivastava
 ```
+### What tasks did I work on / complete?
+- Pair programming with Pallavi to define level switch and composite pattern implementation.
+- Defined loaction of obstacles and rewards for level 2.
+- Discussed with teammates to define game quit scenario.
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-Suyash906.md
+### What am I planning to work on next?
+- Test the game to ensure its working properly.
+- Create UML diagrams for the game.
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+- While working on level switch implementation, Pallavi and I faced few issues around removing objects from the world. Prachi helped us to figure that out.
+
 
 ```diff
 + Pallavi Reddy
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-busipallavi-reddy.md
+### What tasks did I work on / complete?
+
+- Worked with Suyash to setup the composite objects according to the different strategy of levels.  
+- With the discussion with team mates, decided on the game over page and how levels should switch.
+- Decided with team members, how the command pattern ca be implemented in play and quit scenarios.
+- Integrated the code and pushed to development, with testing of levels.
+
+### What am I planning to work on next?
+
+- To incorporate any cosmetic changes if needed, test the team's changes and drawing UML diagrams.
+
+  
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+
+- I had a blocker when I was trying to remove all the objects of a certain type from a level to switch strategies. With help from Prachi, figured out that the object making the call to remove the objects should be added to the World else World is not accessible. Fixed this issue.
 
 ```diff
 + Prach Chouksey
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-prachichouksey.md
+## What tasks did I work on / complete?
+
+* Udated the task sheet with the hours worked for each task.
+* Analysed burndown chart for the week to make sure the team is on track.
+* After suyash and Pallavi completed strategy and composite pattern for the game, added the Game Over feature for the game when the life becomes zero.
+* As part of XP value "Feedback", provided feedback on command pattern and encouraged the team to provide feedback.
+* Updated project kanban board with the issues in progress
+
+
+## What am I planning to work on next?
+* Create pattern class diagram and project uml diagrams.
+* Close issues on project kanban board.
+
+## What tasks are blocked waiting on another team member?
+* No dependencies for the week.
 
 ```diff
 + Wamique Ansari
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-wamiquem.md
+### What tasks did I work on / complete?
 
-**Week4** 
+1. After Pallavi was done with implementing the composite pattern, I added land, sky obstacles and rewards to the world relative to dinosaur movement to get the basic game working so that other team members can start working on other features.
+2. Added the collision feature and get the actor with which the dinosaur is collided. Accordingly, other team members will add observers pattern for life and score. In case of collision, removing the obstacles and rewards.
+
+As part of XP core value 'Simplicity', I ensured that things are kept simple and at the same time progress is made. Also, tasks discussed should be only done, nothing extra. Then we will move step by step further.
+
+### What am I planning to work on next?
+
+To add some effect to the dinosaur in case it collides with obstacles.
+
+### What tasks are blocked waiting on another team member?
+
+Nothing for this week.
+
+## Week4
 
 
 ```diff
