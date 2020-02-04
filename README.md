@@ -133,6 +133,7 @@ Scoreboard and lives of the user are updated using observer pattern.
 To start/quit the game, this pattern is used to send commands to the game.
 
 ## UML Diagrams
+
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Class%20Diagram_T-Rex.png)
 
 ![alt text](https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/docs/Activity%20Diagram.png)
@@ -276,36 +277,98 @@ Moreover, every team member picked a XP value and I picked Simplicity. I would e
 
 ## Week2
 
+```diff
++ Laxmikant Pandhare
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2%20-%20laxmikantbpandhare.md
+
+```diff
++ Suyash Shrivastava
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-Suyash906.md
 
+```diff
++ Wamique Ansari
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-wamiquem.md
 
+```diff
++ Prachi Chouksey
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week2-prachichouksey.md
+
+```diff
++ Pallavi Reddy
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week%202-busipallavi-reddy.md
 
 **Week3**
 
+
+```diff
++ Laxmikant Pandhare
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3%20-%20laxmikantbpandhare.md
+
+```diff
++ Suyash Shrivastava
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-Suyash906.md
 
+```diff
++ Pallavi Reddy
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-busipallavi-reddy.md
 
+```diff
++ Prach Chouksey
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-prachichouksey.md
+
+```diff
++ Wamique Ansari
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week3-wamiquem.md
 
 **Week4** 
 
+
+```diff
++ Laxmikant Pandhare
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4%20-%20laxmikantbpandhare.md
+
+```diff
++ Suyash Shrivastava
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-Suyash906.md
 
+```diff
++ Pallavi Reddy
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-busipallavi-reddy.md
 
+```diff
++ Prachi Chouksey
+```
+
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-prachichouksey.md
+
+```diff
++ Wamique Ansari
+```
 
 https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-wamiquem.md
