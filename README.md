@@ -347,28 +347,106 @@ https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/W
 + Laxmikant Pandhare
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4%20-%20laxmikantbpandhare.md
+### What tasks did I work on / complete?
+
+* We started meeting and discussed about the implemented project in 15 minutes. After that, we discussed about the  documentation and remaining part of the project.
+* Discussed different aspects of the projects.
+* Did brainsorming with the colleagues and discussed different aspects and remaining tasks.
+* Create class diagram for the Command pattern.
+* Create sequence diagram for the user story "As a player, I should be able to play or quit the game."
+* Work with the team to create project journal and ad Video.
+* At the end of the discussion, we finalized our final tasks for this last sprint.
+
+
+### What am I planning to work on next?
+* NA.
+
+
+### What tasks are blocked waiting on another team member?
+* NA.
 
 ```diff
 + Suyash Shrivastava
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-Suyash906.md
+### What tasks did I work on / complete?
+- Created the class and sequence diagram for the strategy pattern.
+- Worked with team to write the main Readme file.
+- Worked with team to create the AD Video.
+- Performed testing to check all features of the game.
+
+### What am I planning to work on next?
+- None
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+- None
 
 ```diff
 + Pallavi Reddy
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-busipallavi-reddy.md
+### What tasks did I work on / complete?
+
+- Added the sounds for coin and losing life
+- Worked with Prachi to draft the use cases.
+- Drafted the Activity Diagram for the T-Rex Game.
+- Drew the class diagram for the composite pattern.
+- Drew the Sequence diagram for the composite pattern.
+- Worked with team to write the main Readme file.
+- Worked with team to create the AD Video.
+- Performed end to end testing and applied cosmetic changes.
+
+### What am I planning to work on next?
+
+- None
+
+  
+
+### What tasks are blocked waiting on another team member or any blockers I faced?
+
+- None
 
 ```diff
 + Prachi Chouksey
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-prachichouksey.md
+## What tasks did I work on / complete?
+
+* Worked with Pallavi on Activity diagram.
+* Worked with Pallavi on Use case specification document.
+* Created Class diagram and sequence diagram for observer pattern.
+* Worked with team on ad video for the game.
+* Updated main journal for the project.
+* Worked with team on the project ppt.
+* Generated burndown chart with completed use cases.
+
+
+## What am I planning to work on next?
+NA
+
+## What tasks are blocked waiting on another team member?
+* NA
 
 ```diff
 + Wamique Ansari
 ```
 
-https://github.com/nguyensjsu/sp19-202-algorithmic-traders/blob/master/journal/Week4-wamiquem.md
+### What tasks did I work on / complete?
+
+1. Added shaking effect to the dinosaur when it collides with the obstacles to make player more aware that the dinosuar is loosing life.
+2. Showed the game info screen to the user when the game completes or the level changes. As there were many class's objects involved in implementing this feature, the classes were getting tight coupled. Explored various patterns in which this can be avoided.
+3. Figured out that mediator pattern could be applied to maintain loose coupling between the classes. Studied and explored mediator pattern and applied the same to implement this feature. This was done as part of the user story "As a player, I want to see level change screen".
+4. After final integration, perform testing to check that new features are working fine and no existing functionalies are broken.
+5. Create class diagram for the mediator pattern.
+6. Create sequence diagram for the user story "As a player, I want to collect rewards."
+7. Work with the team to create project journal and ad Video.
+
+As part of Simplicity, we tried to keep things simple throughout the project.
+
+### What am I planning to work on next?
+
+None
+
+### What tasks are blocked waiting on another team member?
+
+None
